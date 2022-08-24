@@ -1,7 +1,7 @@
 {
   "hosting": {
     "target": "caitoy-site",
-    "public": "dist",
+    "public": ".output/public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
