@@ -1,11 +1,9 @@
-# NETFLIX with Nuxt 3
+# caitoy.web.app
 
-A Cai Toy clone...
+cai-toy.web.app is currently a gatsby ~~
+cattoy.web.app is a nuxt site for firebase... (I hope...)
 
-[NETFLIX with Nuxt 3](https://netflix-nuxt.netlify.app/)
+but also for custom fonts, and lightweight starter, no themes or other stuff but complete with content features...
 
-```
-git clone https://github.com/caicodes/netflix-nuxt.git
-
-```
+this is the default starter with juice out the box... 
 
