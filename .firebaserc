@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "cai-toy"
-  }
+  },
+  "targets": {
+    "cai-toy": {
+      "hosting": {
+        "caitoy-site": [
+          "caitoy"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
