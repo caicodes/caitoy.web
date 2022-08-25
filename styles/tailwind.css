@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: local("Gilroy-Regular"),
+    url(@/fonts/Gilroy/Gilroy-Regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: local("Gilroy-Medium"),
+    url(@/fonts/Gilroy/Gilroy-Medium.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: local("Gilroy-Bold"),
+    url(@/fonts/Gilroy/Gilroy-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Bismark-Light";
+  src: local("Bismark-Light"),
+    url(@/fonts/Bismark/Bismark-Light.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Bismark-Normal";
+  src: local("Bismark-Normal"),
+    url(@/fonts/Bismark/Bismark-Normal.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Bismark-Bold";
+  src: local("Bismark-Bold"),
+    url(@/fonts/Bismark/Bismark-Bold.woff2) format("woff2");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,19 +50,19 @@
 }
 
 @font-face {
-  font-family: "Gilroy-Bold";
-  src: local("Gilroy-Bold"), url(@/fonts/Gilroy-Bold.woff2) format("woff2");
+  font-family: "Bismark-Light";
+  src: local("Bismark-Light"),
+    url(@/fonts/Bismark/Bismark-Light.woff2) format("woff2");
 }
-
 @font-face {
-  font-family: "Gilroy-Medium";
-  src: local("Gilroy-Medium"), url(@/fonts/Gilroy-Medium.woff2) format("woff2");
+  font-family: "Bismark-Normal";
+  src: local("Bismark-Normal"),
+    url(@/fonts/Bismark/Bismark-Normal.woff2) format("woff2");
 }
-
 @font-face {
-  font-family: "Gilroy-Regular";
-  src: local("Gilroy-Regular"),
-    url(@/fonts/Gilroy-Regular.woff2) format("woff2");
+  font-family: "Bismark-Bold";
+  src: local("Bismark-Bold"),
+    url(@/fonts/Bismark/Bismark-Bold.woff2) format("woff2");
 }
 
 .have-questions {
@@ -38,14 +70,13 @@
 }
 
 .brand-font-regular {
-  font-family: "Gilroy-Regular";
+  font-family: "Bismark-Normal";
 }
-.brand-font-medium {
-  font-family: "Gilroy-Medium";
+.brand-font-light {
+  font-family: "Bismark-Light";
 }
-
 .brand-font-bold {
-  font-family: "Gilroy-Bold";
+  font-family: "Bismark-Bold";
 }
 
 .ways-to-get {
@@ -68,7 +99,7 @@ body {
 }
 
 body {
-  font-family: "Gilroy-Regular" !important;
+  font-family: "Gilroy-Regular", sans !important;
   font-size: 1.25rem;
   line-height: 1.6;
   overflow-x: hidden !important;
