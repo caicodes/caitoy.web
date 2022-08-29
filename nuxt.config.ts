@@ -1,17 +1,30 @@
 import { defineNuxtConfig } from "nuxt";
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content"],
+  modules: [
+    [
+      "@pinia/nuxt",
+      {
+        autoImports: [
+          // automatically imports `usePinia()`
+          "defineStore",
+          // automatically imports `usePinia()` as `usePiniaStore()`
+          ["defineStore", "definePiniaStore"],
+        ],
+      },
+    ],
+  ],
   css: ["@/styles/tailwind.css"],
-  // modules: ["@nuxtjs/tailwindcss"], // no customization version
   build: {
     postcss: {
       postcssOptions: require("./postcss.config.js"),
     },
   },
   meta: {
-    title: "NETFLIX Nuxt3 - a Cai Toy clone...",
+    title: "Cai Toy, Design, Develoment, Production...",
+  },
+  head: {
+    link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=3" }],
   },
   gsap: {
     extraPlugins: {

@@ -1,34 +1,4 @@
-@font-face {
-  font-family: "Gilroy-Regular";
-  src: local("Gilroy-Regular"),
-    url(@/fonts/Gilroy/Gilroy-Regular.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Gilroy-Medium";
-  src: local("Gilroy-Medium"),
-    url(@/fonts/Gilroy/Gilroy-Medium.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Gilroy-Bold";
-  src: local("Gilroy-Bold"),
-    url(@/fonts/Gilroy/Gilroy-Bold.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Bismark-Light";
-  src: local("Bismark-Light"),
-    url(@/fonts/Bismark/Bismark-Light.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Bismark-Normal";
-  src: local("Bismark-Normal"),
-    url(@/fonts/Bismark/Bismark-Normal.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Bismark-Bold";
-  src: local("Bismark-Bold"),
-    url(@/fonts/Bismark/Bismark-Bold.woff2) format("woff2");
-}
+@import url("http://fonts.cdnfonts.com/css/montserrat");
 
 @tailwind base;
 @tailwind components;
@@ -49,41 +19,8 @@
   --base-300: #0e0538;
 }
 
-@font-face {
-  font-family: "Bismark-Light";
-  src: local("Bismark-Light"),
-    url(@/fonts/Bismark/Bismark-Light.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Bismark-Normal";
-  src: local("Bismark-Normal"),
-    url(@/fonts/Bismark/Bismark-Normal.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Bismark-Bold";
-  src: local("Bismark-Bold"),
-    url(@/fonts/Bismark/Bismark-Bold.woff2) format("woff2");
-}
-
-.have-questions {
-  background: rgba(0, 0, 0.3);
-}
-
-.brand-font-regular {
-  font-family: "Bismark-Normal";
-}
-.brand-font-light {
-  font-family: "Bismark-Light";
-}
-.brand-font-bold {
-  font-family: "Bismark-Bold";
-}
-
-.ways-to-get {
-  background: rgb(13, 5, 54);
-}
-
 a {
+  transition: all ease 0.5s;
   color: #9e86ff;
 }
 a:hover {
@@ -99,37 +36,9 @@ body {
 }
 
 body {
-  font-family: "Gilroy-Regular", sans !important;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   line-height: 1.6;
   overflow-x: hidden !important;
   background: transparent;
-}
-
-.dBWzrh.btn--tertiary {
-  background-color: rgb(181, 53, 246);
-  color: rgb(255, 255, 255);
-  border: 2px solid transparent;
-  overflow: hidden;
-  transition: all 0.5s ease 0s !important;
-}
-
-.btn-color {
-  background: #b535f6;
-}
-
-.max-section-hero-dbl-scroll h1 {
-  font-size: 1.6em;
-  margin: 20px auto;
-  max-width: 600px;
-}
-
-.max-section-marquee-title h4:before {
-  border-image-source: linear-gradient(to left, #7b2abf, transparent);
-  margin: 0 20px 0 0;
-}
-
-.max-section-marquee-title h4:after {
-  border-image-source: linear-gradient(to right, #7b2abf, transparent);
-  margin: 0 0 0 20px;
 }

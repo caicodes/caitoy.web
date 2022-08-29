@@ -1,3 +1,6 @@
 <template>
-  <AnimatedBackground />
+  <main>
+    <AppHeader />
+  </main>
+  <AppAnimatedBackground />
 </template>
