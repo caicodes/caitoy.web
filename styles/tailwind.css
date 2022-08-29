@@ -21,10 +21,9 @@
 
 a {
   transition: all ease 0.5s;
-  color: #9e86ff;
 }
 a:hover {
-  color: white;
+  color: var(--primary-content);
 }
 
 html {

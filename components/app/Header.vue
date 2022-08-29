@@ -10,7 +10,7 @@
           >
         </nuxt-link>
       </div>
-      <div class="flex gap-5 md:gap-10 text-lg">
+      <div class="top-nav flex gap-8 md:gap-10 text-lg">
         <NuxtLink to="/">work</NuxtLink>
         <NuxtLink to="/">about</NuxtLink>
         <NuxtLink to="/">contact</NuxtLink>
@@ -18,3 +18,23 @@
     </nav>
   </header>
 </template>
+
+<style scoped>
+a {
+  position: relative;
+  padding: 0.5rem 0;
+}
+a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0px;
+  height: 1px;
+  background-color: white;
+  transition: all ease 0.5s;
+}
+a:hover:before {
+  width: 100%;
+}
+</style>
