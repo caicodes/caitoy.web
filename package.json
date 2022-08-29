@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "caitoy-portfolio",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
