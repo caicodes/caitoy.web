@@ -83,35 +83,35 @@ onMounted(() => {
   console.log("yo gsap")
 
   animation
-    // .fromTo(
-    //   ".hello",
-    //   { opacity: 0, x: -40 },
-    //   { opacity: 1, x: 0, delay: 1, duration: 0.5, ease: "power4.easeOut" }
-    // )
-    // .to(".hello", { delay: 1, opacity: 0, display: "none" })
-    // .fromTo(
-    //   ".im",
-    //   { opacity: 0, x: -40 },
-    //   { opacity: 1, x: 0, delay: 0.5, duration: 0.5, ease: "power4.easeOut" }
-    // )
+    .fromTo(
+      ".hello",
+      { opacity: 0, x: -40 },
+      { opacity: 1, x: 0, delay: 1, duration: 0.5, ease: "power4.easeOut" }
+    )
+    .to(".hello", { delay: 1, opacity: 0, display: "none" })
+    .fromTo(
+      ".im",
+      { opacity: 0, x: -40 },
+      { opacity: 1, x: 0, delay: 0.5, duration: 0.5, ease: "power4.easeOut" }
+    )
 
-    // .fromTo(
-    //   ".cai",
-    //   { opacity: 0, x: -40 },
-    //   { opacity: 1, x: 0, delay: 0, duration: 0.5, ease: "power4.easeOut" }
-    // )
-    // .to(".im,.cai", { delay: 2, opacity: 0, stagger: 0.25, ease: "easeIn" })
+    .fromTo(
+      ".cai",
+      { opacity: 0, x: -40 },
+      { opacity: 1, x: 0, delay: 0, duration: 0.5, ease: "power4.easeOut" }
+    )
+    .to(".im,.cai", { delay: 2, opacity: 0, stagger: 0.25, ease: "easeIn" })
 
-    // .fromTo(
-    //   ".i",
-    //   { opacity: 0, x: -40 },
-    //   { opacity: 1, x: 0, delay: 0.5, duration: 0.35, ease: "power4.easeOut" }
-    // )
-    // .fromTo(
-    //   ".create",
-    //   { opacity: 0, x: -40 },
-    //   { opacity: 1, x: 0, delay: 0, duration: 1.25, ease: "power4.easeOut" }
-    // )
+    .fromTo(
+      ".i",
+      { opacity: 0, x: -40 },
+      { opacity: 1, x: 0, delay: 0.5, duration: 0.35, ease: "power4.easeOut" }
+    )
+    .fromTo(
+      ".create",
+      { opacity: 0, x: -40 },
+      { opacity: 1, x: 0, delay: 0, duration: 1.25, ease: "power4.easeOut" }
+    )
     .fromTo(
       ".experiences",
       { opacity: 0, x: -40 },
