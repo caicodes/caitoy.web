@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col align-middle relative">
+  <div class="flex flex-col align-middle place-content-center relative">
     <div class="large-text file:hello opacity-5 absolute">work</div>
     <div class="main-text">
       <div class="line line1">
@@ -31,6 +31,7 @@
   text-transform: uppercase;
   text-align: left;
   cursor: default;
+  align-items: center;
 }
 
 .main-text {
@@ -42,6 +43,6 @@
   cursor: default;
   width: 100vw;
   z-index: 2;
-  @apply flex;
+  @apply flex text-center flex-col;
 }
 </style>

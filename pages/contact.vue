@@ -1,6 +1,6 @@
 <template>
-  <div class="main-text flex flex-col align-middle relative">
-    <div class="contact opacity-5 absolute">contact</div>
+  <div class="flex flex-col align-middle place-content-center relative">
+    <div class="main-text opacity-5 absolute">contact</div>
   </div>
 </template>
 

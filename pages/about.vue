@@ -1,6 +1,6 @@
 <template>
-  <div class="main-text flex flex-col align-middle relative">
-    <div class="hello opacity-5 absolute">about</div>
+  <div class="flex flex-col align-middle place-content-center relative">
+    <div class="main-text opacity-5 absolute">about</div>
   </div>
 </template>
 
