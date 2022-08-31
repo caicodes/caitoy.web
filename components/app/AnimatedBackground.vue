@@ -12,8 +12,20 @@
 </template>
 
 <style>
+:root {
+  --bg-grad-color-1: #28062f;
+  --bg-grad-color-2: #27042a;
+  --bg-grad-color-3: #130426;
+  --bg-grad-color-4: #060107;
+}
 body {
-  background: linear-gradient(-45deg, #1d0235, #300214, #033547, #023429);
+  background: linear-gradient(
+    -65deg,
+    var(--bg-grad-color-1),
+    var(--bg-grad-color-2),
+    var(--bg-grad-color-3),
+    var(--bg-grad-color-4)
+  );
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
@@ -32,6 +44,6 @@ body {
 }
 
 .plane-wrapper {
-  @apply text-white/10 bottom-4 right-[21.5rem] opacity-0;
+  @apply text-white/10 bottom-4 right-[21.5rem] opacity-0 -z-50;
 }
 </style>
