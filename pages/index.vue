@@ -1,56 +1,50 @@
 <template>
-  <div class="main-text flex flex-col align-middle relative">
-    <div class="hello opacity-0 absolute">hello</div>
-    <div class="flex absolute">
-      <div class="im opacity-0">i'm</div>
-      <div class="cai opacity-0">cai</div>
-    </div>
+  <div>
+    <div class="main-text flex flex-col align-middle relative">
+      <div ref="hello" class="hello opacity-0 absolute">hello</div>
+      <div class="flex absolute">
+        <div ref="im" class="im opacity-0">i'm</div>
+        <div ref="cai" class="cai opacity-0">cai</div>
+      </div>
 
-    <div class="flex">
-      <div class="i opacity-0">i</div>
-      <div class="create opacity-0">create</div>
-    </div>
+      <div class="flex">
+        <div ref="itext" class="i opacity-0">i</div>
+        <div ref="createtext" class="create opacity-0">create</div>
+      </div>
 
-    <span
-      @mouseleave="experiencesOff()"
-      @mouseover="experiencesOn()"
-      class="experiences opacity-0"
-      >experiences</span
-    >
-  </div>
-  <div class="img_group">
-    <div class="img_group_inner">
-      <img src="./images/mobile/photo-4.jpg" alt="" />
-      <img src="./images/mobile/photo-3.jpg" alt="" />
-      <img src="./images/mobile/photo-2.jpg" alt="" />
-      <img src="./images/mobile/photo-1.jpg" alt="" />
+      <span
+        @mouseleave="experiencesOff()"
+        @mouseover="experiencesOn()"
+        ref="experiencestext"
+        class="experiences opacity-0"
+        >experiences</span
+      >
     </div>
-  </div>
-
-  <div
-    class="bottom-bar fixed bottom-0 left-0 right-0 uppercase text-xs opacity-30 justify-between w-full z-50"
-  >
-    <div class="flex justify-between p-5 gap-4">
-      <div>ui developer / frontend engineer / web producer</div>
-      <div class="hidden md:block">
-        <!-- <a href="https://twitter.com/ArtasceCreative" target="_blank"
-                >twitter</a
-              >
-              /
-              <a
-                href="https://www.youtube.com/channel/UCnS8ijumElXzBHIDKgoIBMg"
-                target="_blank"
-                >youtube</a
-              > -->
-        / <a href="https://github.com/caicodes" target="_blank">github</a>
+    <div class="img_group">
+      <div class="img_group_inner">
+        <img ref="img1" src="~/assets/images/mobile/photo-4.jpg" alt="" />
+        <img ref="img2" src="~/assets/images/mobile/photo-3.jpg" alt="" />
+        <img ref="img3" src="~/assets/images/mobile/photo-2.jpg" alt="" />
+        <img ref="img4" src="~/assets/images/mobile/photo-1.jpg" alt="" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { onMounted } from "vue"
+import { ref, onMounted } from "vue"
 import gsap from "gsap"
+
+const img1 = ref()
+const img2 = ref()
+const img3 = ref()
+const img4 = ref()
+const hello = ref()
+const im = ref()
+const cai = ref()
+const itext = ref()
+const createtext = ref()
+const experiencestext = ref()
 
 function experiencesOn() {
   console.log("yo on it")
@@ -82,47 +76,54 @@ onMounted(() => {
 
   animation
     .fromTo(
-      ".hello",
+      hello.value,
       { opacity: 0, x: -40 },
       { opacity: 1, x: 0, delay: 1, duration: 0.5, ease: "power4.easeOut" }
     )
-    .to(".hello", { delay: 1, opacity: 0, display: "none" })
+    .to(hello.value, { delay: 1, opacity: 0 })
     .fromTo(
-      ".im",
+      im.value,
       { opacity: 0, x: -40 },
       { opacity: 1, x: 0, delay: 0.5, duration: 0.5, ease: "power4.easeOut" }
     )
-
     .fromTo(
-      ".cai",
+      cai.value,
       { opacity: 0, x: -40 },
       { opacity: 1, x: 0, delay: 0, duration: 0.5, ease: "power4.easeOut" }
     )
-    .to(".im,.cai", { delay: 2, opacity: 0, stagger: 0.25, ease: "easeIn" })
-
+    .to(im.value, {
+      delay: 2,
+      opacity: 0,
+      ease: "easeIn",
+    })
+    .to(cai.value, {
+      delay: 0,
+      opacity: 0,
+      ease: "easeIn",
+    })
     .fromTo(
-      ".i",
+      itext.value,
       { opacity: 0, x: -40 },
       { opacity: 1, x: 0, delay: 0.5, duration: 0.35, ease: "power4.easeOut" }
     )
     .fromTo(
-      ".create",
+      createtext.value,
       { opacity: 0, x: -40 },
       { opacity: 1, x: 0, delay: 0, duration: 1.25, ease: "power4.easeOut" }
     )
     .fromTo(
-      ".experiences",
+      experiencestext.value,
       { opacity: 0, x: -40 },
       { opacity: 1, x: 0, delay: 0.25, duration: 3, ease: "power4.easeOut" }
     )
-    .from(".img_group img", {
+    .from([img1.value, img2.value, img3.value, img4.value], {
       x: 1100,
       duration: 1,
       opacity: 0,
       stagger: 0.14,
     })
     .to(
-      ".img_group img",
+      [img1.value, img2.value, img3.value, img4.value],
       {
         x: 1100,
         margin: "0 -140px 0",
@@ -136,7 +137,7 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
 .content {
   height: calc(100vh - 120px);
   width: 100vw;
@@ -146,7 +147,13 @@ onMounted(() => {
 
   @apply p-5;
 }
-.content .main-text {
+.main-text {
+  font-size: 12vw;
+  font-weight: 400;
+  line-height: 10vw;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: default;
   width: 100vw;
   z-index: 2;
   @apply flex;
@@ -167,15 +174,6 @@ onMounted(() => {
 .content .img_group img {
   opacity: 0;
   width: 20vw;
-}
-
-.main-text {
-  font-size: 12vw;
-  font-weight: 400;
-  line-height: 10vw;
-  text-transform: uppercase;
-  text-align: left;
-  cursor: default;
 }
 
 .experiences {

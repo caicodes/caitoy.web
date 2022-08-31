@@ -1,29 +1,17 @@
-<script setup>
-import { FooterLinks, FooterActions, CopyrightText } from "~/constants";
-</script>
-
 <template>
-  <footer
-    class="footer footer-center p-4 md:p-8 lg:p-12 bg-base-100 text-base-content"
-  >
-    <div class="flex flex-wrap justify-center flex-col md:flex-row">
-      <NuxtLink
-        to="/"
-        class="footer-links btn btn-ghost hover:bg-inherit hover:text-white"
-        v-for="Link in FooterActions"
-        >{{ Link }}</NuxtLink
-      >
+  <div class="bottom-bar">
+    <div class="flex justify-between p-5 gap-4">
+      <div>ui developer / frontend engineer / web producer</div>
+      <div class="hidden md:flex gap-4">
+        <a href="https://my.indeed.com/p/jjbg99p" target="_blank">resume</a> /
+        <a href="https://github.com/caicodes" target="_blank">github</a>
+      </div>
     </div>
-    <div class="flex flex-wrap justify-center text-xs">
-      <NuxtLink
-        to="/"
-        class="link link-hover whitespace-nowrap m-2"
-        v-for="Link in FooterLinks"
-        >{{ Link }}
-      </NuxtLink>
-    </div>
-    <div>
-      <p class="text-xs text-primary/80">{{ CopyrightText }}</p>
-    </div>
-  </footer>
+  </div>
 </template>
+
+<style scoped>
+.bottom-bar {
+  @apply fixed bottom-0 left-0 right-0 uppercase text-xs opacity-30 justify-between w-full z-50;
+}
+</style>
