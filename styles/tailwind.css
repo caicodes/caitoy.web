@@ -5,25 +5,27 @@
 @tailwind utilities;
 
 :root {
-  --primary: #9e86ff;
-  --primary-focus: #a991f7;
-  --primary-content: white;
-  --secondary: #b535f6;
-  --secondary-focus: #c800ff;
-  --secondary-content: white;
-  --accent: #7e22ce;
-  --accent-focus: #7b2abf;
-  --accent-content: #ff00e5;
-  --neutral: #480cb0;
-  --base-100: #030326;
-  --base-300: #0e0538;
+  --primary: #4d0a5c;
+  --primary-focus: #5c0c6e;
+  --primary-content: #fafaf0;
+  --secondary: #ff7c0a;
+  --secondary-focus: #ff871f;
+  --secondary-content: #f5f5e0;
+  --accent: #a1d6f7;
+  --accent-focus: #c7e6fa;
+  --accent-content: #0d5f96;
+  --neutral: #1f0524;
+  --base-content: #fafaf0;
+  --base-100: #060107;
+  --base-200: #1f0524;
+  --base-300: #2e0736;
 }
 
 a {
   transition: all ease 0.5s;
 }
 a:hover {
-  color: var(--primary-content);
+  color: var(--accent);
 }
 
 html {
@@ -40,4 +42,5 @@ body {
   line-height: 1.6;
   overflow-x: hidden !important;
   background: transparent;
+  color: var(--base-content);
 }

@@ -3,7 +3,7 @@
     <NuxtLink
       to="/work"
       class="back-link ml-20 flex justify-center place-items-center uppercase"
-      ><AppIconsBackArrowSvg class="text-pink-500 h-12" />work</NuxtLink
+      ><AppIconsBackArrowSvg class="text-accent h-12" />work</NuxtLink
     >
     <div class="large-text file:hello opacity-5 absolute">project</div>
   </div>

@@ -3,7 +3,7 @@
     class="flex flex-col align-middle place-content-center relative"
     @mousemove="mouseMove"
   >
-    <div class="large-text file:hello opacity-5 absolute">work</div>
+    <div class="large-text opacity-5 absolute">work</div>
 
     <div class="main-text">
       <div class="line line1">
@@ -47,6 +47,9 @@ const mouseMove = (event) => {
 </script>
 
 <style scoped>
+.line {
+  overflow: hidden;
+}
 .main-text p {
   overflow: hidden;
 }
@@ -103,14 +106,15 @@ const mouseMove = (event) => {
 }
 
 .main-text {
-  font-size: 3vw;
-  font-weight: 400;
-  line-height: 10vw;
-  text-transform: uppercase;
+  font-size: 2vw;
+  line-height: 3vw;
   text-align: left;
   cursor: default;
   width: 100vw;
   z-index: 2;
-  @apply flex text-center flex-col;
+  @apply flex text-center flex-col font-light;
+}
+.main-text a:hover {
+  color: var(--accent-focus);
 }
 </style>

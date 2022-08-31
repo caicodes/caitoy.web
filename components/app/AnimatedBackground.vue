@@ -44,6 +44,6 @@ body {
 }
 
 .plane-wrapper {
-  @apply text-white/10 bottom-4 right-[21.5rem] opacity-0 -z-50;
+  @apply text-brand-primary-content bottom-4 right-[21.5rem] opacity-0;
 }
 </style>

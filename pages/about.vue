@@ -7,22 +7,26 @@
 
     <div class="main-text">
       <div class="line line1">
-        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
+        <p><NuxtLink to="/projects/project">voya destinations</NuxtLink></p>
       </div>
       <div class="line line2">
-        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
+        <p><NuxtLink to="/projects/project">she's in her apron</NuxtLink></p>
       </div>
       <div class="line line3">
-        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
+        <p><NuxtLink to="/projects/project">hbo nuxt</NuxtLink></p>
       </div>
       <div class="line line4">
-        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
+        <p><NuxtLink to="/projects/project">netflix react</NuxtLink></p>
+      </div>
+      <div class="line line5">
+        <p><NuxtLink to="/projects/project">coinwire live</NuxtLink></p>
       </div>
 
       <div class="cursor-follow1 cursor"></div>
       <div class="cursor-follow2 cursor"></div>
       <div class="cursor-follow3 cursor"></div>
       <div class="cursor-follow4 cursor"></div>
+      <div class="cursor-follow5 cursor"></div>
     </div>
     <Head>
       <Title>Cai Toy / About </Title>
@@ -79,6 +83,10 @@ const mouseMove = (event) => {
   background: url("~/assets/images/projects/proj4.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
+.cursor-follow5 {
+  background: url("~/assets/images/projects/proj3.jpg") no-repeat 50% 50%;
+  opacity: 0;
+}
 
 .line1:hover ~ .cursor-follow1 {
   opacity: 1;
@@ -90,6 +98,9 @@ const mouseMove = (event) => {
   opacity: 1;
 }
 .line4:hover ~ .cursor-follow4 {
+  opacity: 1;
+}
+.line5:hover ~ .cursor-follow5 {
   opacity: 1;
 }
 
@@ -104,14 +115,20 @@ const mouseMove = (event) => {
 }
 
 .main-text {
-  font-size: 3vw;
-  font-weight: 400;
-  line-height: 10vw;
-  text-transform: uppercase;
+  font-size: 2vw;
+  line-height: 3vw;
   text-align: left;
   cursor: default;
   width: 100vw;
   z-index: 2;
-  @apply flex text-center flex-col;
+  @apply flex text-center flex-col font-light;
+}
+.main-text a {
+  @apply px-8 py-4 rounded-md;
+}
+.main-text a:hover {
+  color: var(--accent-focus);
+  /* background: var(--accent-content); */
+  @apply bg-accent text-accent-content rounded rounded-lg;
 }
 </style>

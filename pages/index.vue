@@ -22,10 +22,31 @@
     </div>
     <div class="img_group">
       <div class="img_group_inner">
-        <img ref="img1" src="~/assets/images/mobile/photo-4.jpg" alt="" />
+        <!-- <img ref="img1" src="~/assets/images/mobile/photo-4.jpg" alt="" />
         <img ref="img2" src="~/assets/images/mobile/photo-3.jpg" alt="" />
-        <img ref="img3" src="~/assets/images/mobile/photo-2.jpg" alt="" />
-        <img ref="img4" src="~/assets/images/mobile/photo-1.jpg" alt="" />
+        <img ref="img3" src="~/assets/images/mobile/photo-2.jpg" alt="" /> -->
+        <!-- <img ref="img4" src="~/assets/images/mobile/photo-1.jpg" alt="" /> -->
+
+        <Phone
+          ref="phone1"
+          imgSrc="/assets/images/mobile/photo-1.jpg"
+          class="phone"
+        />
+        <Phone
+          ref="phone2"
+          imgSrc="/assets/images/mobile/photo-2.jpg"
+          class="phone"
+        />
+        <Phone
+          ref="phone3"
+          imgSrc="/assets/images/mobile/photo-3.jpg"
+          class="phone"
+        />
+        <Phone
+          ref="phone4"
+          imgSrc="/assets/images/mobile/photo-4.jpg"
+          class="phone"
+        />
       </div>
     </div>
   </div>
@@ -34,11 +55,13 @@
 <script setup>
 import { ref, onMounted } from "vue"
 import gsap from "gsap"
+import Phone from "../components/app/mockups/Phone.vue"
 
-const img1 = ref()
-const img2 = ref()
-const img3 = ref()
-const img4 = ref()
+const phone1 = ref()
+const phone2 = ref()
+const phone3 = ref()
+const phone4 = ref()
+
 const hello = ref()
 const im = ref()
 const cai = ref()
@@ -48,7 +71,7 @@ const experiencestext = ref()
 
 function experiencesOn() {
   console.log("yo on it")
-  gsap.to(".img_group img", {
+  gsap.to(".phone", {
     x: 100,
     margin: "0 10px 0",
     duration: 1,
@@ -59,7 +82,7 @@ function experiencesOn() {
 }
 function experiencesOff() {
   console.log("yo off it")
-  gsap.to(".img_group img", {
+  gsap.to(".phone", {
     x: 1100,
     margin: "0 -140px 0",
     duration: 1,
@@ -72,8 +95,7 @@ function experiencesOff() {
 onMounted(() => {
   const animation = gsap.timeline()
 
-  console.log("yo gsap")
-
+  console.log("mounted")
   animation
     .fromTo(
       hello.value,
@@ -114,16 +136,16 @@ onMounted(() => {
     .fromTo(
       experiencestext.value,
       { opacity: 0, x: -40 },
-      { opacity: 1, x: 0, delay: 0.25, duration: 3, ease: "power4.easeOut" }
+      { opacity: 1, x: 0, delay: 0.25, duration: 2, ease: "power4.easeOut" }
     )
-    .from([img1.value, img2.value, img3.value, img4.value], {
+    .from(".phone", {
       x: 1100,
       duration: 1,
       opacity: 0,
       stagger: 0.14,
     })
     .to(
-      [img1.value, img2.value, img3.value, img4.value],
+      ".phone",
       {
         x: 1100,
         margin: "0 -140px 0",
@@ -171,9 +193,9 @@ onMounted(() => {
   z-index: 1;
 }
 
-.content .img_group img {
+.content .img_group .phone {
   opacity: 0;
-  width: 20vw;
+
   z-index: 99;
   position: relative;
 }
@@ -189,7 +211,7 @@ onMounted(() => {
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: white;
+  background-color: var(--primary-content);
   transition: all ease 0.5s;
 }
 .experiences:hover:after,

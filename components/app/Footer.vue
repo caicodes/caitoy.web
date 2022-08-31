@@ -12,6 +12,10 @@
 
 <style scoped>
 .bottom-bar {
-  @apply fixed bottom-0 left-0 right-0 uppercase text-xs opacity-30 justify-between w-full z-50;
+  @apply fixed bottom-0 left-0 right-0 uppercase text-xs text-base-content/20 justify-between w-full z-50;
+}
+
+.bottom-bar a:hover {
+  @apply text-base-content;
 }
 </style>
