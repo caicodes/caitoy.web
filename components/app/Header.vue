@@ -11,9 +11,9 @@
         </nuxt-link>
       </div>
       <div class="top-nav flex gap-8 md:gap-10 text-lg">
-        <NuxtLink to="/">work</NuxtLink>
-        <NuxtLink to="/">about</NuxtLink>
-        <NuxtLink to="/">contact</NuxtLink>
+        <NuxtLink to="/work">work</NuxtLink>
+        <NuxtLink to="/about">about</NuxtLink>
+        <NuxtLink to="/contact">contact</NuxtLink>
       </div>
     </nav>
   </header>
