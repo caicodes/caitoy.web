@@ -3,17 +3,22 @@
     <div class="large-text file:hello opacity-5 absolute">work</div>
     <div class="main-text">
       <div class="line line1">
-        <p><a href="/project">project</a></p>
+        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
       </div>
       <div class="line line2">
-        <p><a href="/project">project</a></p>
+        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
       </div>
       <div class="line line3">
-        <p><a href="/project">project</a></p>
+        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
       </div>
       <div class="line line4">
-        <p><a href="/project">project</a></p>
+        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
       </div>
+
+      <div class="cursor-follow1 cursor"></div>
+      <div class="cursor-follow2 cursor"></div>
+      <div class="cursor-follow3 cursor"></div>
+      <div class="cursor-follow4 cursor"></div>
     </div>
   </div>
 </template>
