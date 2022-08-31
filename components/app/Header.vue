@@ -20,6 +20,10 @@
 </template>
 
 <style scoped>
+header nav {
+  position: relative;
+  z-index: 999;
+}
 a {
   position: relative;
   padding: 0.5rem 0;

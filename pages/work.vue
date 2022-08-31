@@ -24,6 +24,9 @@
       <div class="cursor-follow3 cursor"></div>
       <div class="cursor-follow4 cursor"></div>
     </div>
+    <Head>
+      <Title>Cai Toy / Work</Title>
+    </Head>
   </div>
 </template>
 

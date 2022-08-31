@@ -3,13 +3,13 @@
     <div class="main-text flex flex-col align-middle relative">
       <div ref="hello" class="hello opacity-0 absolute">hello</div>
       <div class="flex absolute">
-        <div ref="im" class="im opacity-0">i'm</div>
+        <div ref="im" class="im opacity-0 mr-5 lg:mr-7">i'm</div>
         <div ref="cai" class="cai opacity-0">cai</div>
       </div>
 
       <div class="flex">
-        <div ref="itext" class="i opacity-0">i</div>
-        <div ref="createtext" class="create opacity-0">create</div>
+        <div ref="itext" class="i opacity-0 mr-5 lg:mr-7">i</div>
+        <div ref="createtext" class="create opacity-0 z-30">create</div>
       </div>
 
       <span
@@ -80,11 +80,11 @@ onMounted(() => {
       { opacity: 0, x: -40 },
       { opacity: 1, x: 0, delay: 1, duration: 0.5, ease: "power4.easeOut" }
     )
-    .to(hello.value, { delay: 1, opacity: 0 })
+    .to(hello.value, { delay: 0.5, opacity: 0 })
     .fromTo(
       im.value,
       { opacity: 0, x: -40 },
-      { opacity: 1, x: 0, delay: 0.5, duration: 0.5, ease: "power4.easeOut" }
+      { opacity: 1, x: 0, delay: 0.25, duration: 0.5, ease: "power4.easeOut" }
     )
     .fromTo(
       cai.value,
@@ -92,7 +92,7 @@ onMounted(() => {
       { opacity: 1, x: 0, delay: 0, duration: 0.5, ease: "power4.easeOut" }
     )
     .to(im.value, {
-      delay: 2,
+      delay: 1.25,
       opacity: 0,
       ease: "easeIn",
     })
@@ -174,6 +174,8 @@ onMounted(() => {
 .content .img_group img {
   opacity: 0;
   width: 20vw;
+  z-index: 99;
+  position: relative;
 }
 
 .experiences {

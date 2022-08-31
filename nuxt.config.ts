@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from "nuxt";
+import { defineNuxtConfig } from "nuxt"
 
 export default defineNuxtConfig({
   modules: [
@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     },
   },
   meta: {
-    title: "Cai Toy, Design, Develoment, Production...",
+    title: "Cai Toy / Design, Develoment, Production...",
   },
   head: {
     link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=3" }],
@@ -35,4 +35,4 @@ export default defineNuxtConfig({
       expoScaleEase: true,
     },
   },
-});
+})

@@ -24,11 +24,15 @@
       <div class="cursor-follow3 cursor"></div>
       <div class="cursor-follow4 cursor"></div>
     </div>
+    <Head>
+      <Title>Cai Toy / About </Title>
+    </Head>
   </div>
 </template>
 
 <script setup>
 import gsap from "gsap"
+
 let posX = 0
 let posY = 0
 const mouseMove = (event) => {
