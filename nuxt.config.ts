@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from "nuxt"
-
+import gsap from "gsap"
 export default defineNuxtConfig({
   modules: [
     [

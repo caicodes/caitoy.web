@@ -1,22 +1,34 @@
 <template>
-  <div
-    class="flex flex-col align-middle place-content-center relative"
-    @mousemove="mouseMove"
-  >
-    <div class="large-text opacity-5 absolute">work</div>
+  <div class="flex flex-col align-middle place-content-center relative" @mousemove="mouseMove">
+
+    <div ref="lgText" class="large-text opacity-5 absolute text-accent">
+      work
+    </div>
+
+    <div ref="lgBgText" class="large-text-bg opacity-[1%] absolute bottom-0 text-base top-40 h-screen">
+      work
+    </div>
 
     <div class="main-text">
       <div class="line line1">
-        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
+        <p>
+          <NuxtLink to="/projects/project">project</NuxtLink>
+        </p>
       </div>
       <div class="line line2">
-        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
+        <p>
+          <NuxtLink to="/projects/project">project</NuxtLink>
+        </p>
       </div>
       <div class="line line3">
-        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
+        <p>
+          <NuxtLink to="/projects/project">project</NuxtLink>
+        </p>
       </div>
       <div class="line line4">
-        <p><NuxtLink to="/projects/project">project</NuxtLink></p>
+        <p>
+          <NuxtLink to="/projects/project">project</NuxtLink>
+        </p>
       </div>
 
       <div class="cursor-follow1 cursor"></div>
@@ -24,6 +36,7 @@
       <div class="cursor-follow3 cursor"></div>
       <div class="cursor-follow4 cursor"></div>
     </div>
+
     <Head>
       <Title>Cai Toy / Work</Title>
     </Head>
@@ -44,15 +57,52 @@ const mouseMove = (event) => {
     y: posY - 380,
   })
 }
+
+const lgText = ref()
+const lgBgText = ref()
+
+const titleTimeline = gsap.timeline()
+// console.log(titleTimeline)
+onBeforeUnmount(() => {
+  console.log("im too young to die")
+})
+onUnmounted(() => {
+  console.log("gone now")
+})
+
+onMounted(() => {
+  console.log("here i am to save the day...")
+  titleTimeline
+    .fromTo(lgText.value, { xPercent: -100 }, { xPercent: 0 })
+    .fromTo(
+      lgBgText.value,
+      {
+        xPercent: 0,
+        yPercent: 0,
+        scale: 0.5,
+        opacity: 0,
+      },
+      {
+        xPercent: 12.5,
+        yPercent: 25,
+        scale: 1.5,
+        opacity: 0.008,
+        delay: 0,
+        duration: 0.2,
+      }
+    )
+})
 </script>
 
 <style scoped>
 .line {
   overflow: hidden;
 }
+
 .main-text p {
   overflow: hidden;
 }
+
 .cursor {
   position: absolute;
   background-size: cover;
@@ -69,29 +119,35 @@ const mouseMove = (event) => {
   background: url("~/assets/images/projects/proj1.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
+
 .cursor-follow2 {
   background: url("~/assets/images/projects/proj2.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
+
 .cursor-follow3 {
   background: url("~/assets/images/projects/proj3.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
+
 .cursor-follow4 {
   background: url("~/assets/images/projects/proj4.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
 
-.line1:hover ~ .cursor-follow1 {
+.line1:hover~.cursor-follow1 {
   opacity: 1;
 }
-.line2:hover ~ .cursor-follow2 {
+
+.line2:hover~.cursor-follow2 {
   opacity: 1;
 }
-.line3:hover ~ .cursor-follow3 {
+
+.line3:hover~.cursor-follow3 {
   opacity: 1;
 }
-.line4:hover ~ .cursor-follow4 {
+
+.line4:hover~.cursor-follow4 {
   opacity: 1;
 }
 
@@ -105,6 +161,14 @@ const mouseMove = (event) => {
   align-items: center;
 }
 
+.large-text-bg {
+  font-size: 25vw;
+  line-height: 10vw;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: default;
+}
+
 .main-text {
   font-size: 2vw;
   line-height: 3vw;
@@ -114,6 +178,7 @@ const mouseMove = (event) => {
   z-index: 2;
   @apply flex text-center flex-col font-light;
 }
+
 .main-text a:hover {
   color: var(--accent-focus);
 }

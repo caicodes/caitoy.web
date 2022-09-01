@@ -1,0 +1,10 @@
+{
+    "editor.cursorBlinking": "phase",
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "javascriptreact"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+}

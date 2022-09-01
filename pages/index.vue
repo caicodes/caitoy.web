@@ -12,13 +12,8 @@
         <div ref="createtext" class="create opacity-0 z-30">create</div>
       </div>
 
-      <span
-        @mouseleave="experiencesOff()"
-        @mouseover="experiencesOn()"
-        ref="experiencestext"
-        class="experiences opacity-0"
-        >experiences</span
-      >
+      <span @mouseleave="experiencesOff()" @mouseover="experiencesOn()" ref="experiencestext"
+        class="experiences opacity-0">experiences</span>
     </div>
     <div class="img_group">
       <div class="img_group_inner">
@@ -27,26 +22,10 @@
         <img ref="img3" src="~/assets/images/mobile/photo-2.jpg" alt="" /> -->
         <!-- <img ref="img4" src="~/assets/images/mobile/photo-1.jpg" alt="" /> -->
 
-        <Phone
-          ref="phone1"
-          imgSrc="/assets/images/mobile/photo-1.jpg"
-          class="phone"
-        />
-        <Phone
-          ref="phone2"
-          imgSrc="/assets/images/mobile/photo-2.jpg"
-          class="phone"
-        />
-        <Phone
-          ref="phone3"
-          imgSrc="/assets/images/mobile/photo-3.jpg"
-          class="phone"
-        />
-        <Phone
-          ref="phone4"
-          imgSrc="/assets/images/mobile/photo-4.jpg"
-          class="phone"
-        />
+        <Phone ref="phone1" imgSrc="/assets/images/mobile/photo-1.jpg" class="phone" />
+        <Phone ref="phone2" imgSrc="/assets/images/mobile/photo-2.jpg" class="phone" />
+        <Phone ref="phone3" imgSrc="/assets/images/mobile/photo-3.jpg" class="phone" />
+        <Phone ref="phone4" imgSrc="/assets/images/mobile/photo-4.jpg" class="phone" />
       </div>
     </div>
   </div>
@@ -169,6 +148,7 @@ onMounted(() => {
 
   @apply p-5;
 }
+
 .main-text {
   font-size: 12vw;
   font-weight: 400;
@@ -180,9 +160,11 @@ onMounted(() => {
   z-index: 2;
   @apply flex;
 }
+
 .img_group_inner {
   display: flex;
 }
+
 .content .img_group {
   position: absolute;
   top: 10%;
@@ -205,6 +187,7 @@ onMounted(() => {
   display: flex;
   width: auto;
 }
+
 .experiences:after {
   content: "";
   position: absolute;
@@ -214,13 +197,16 @@ onMounted(() => {
   background-color: var(--primary-content);
   transition: all ease 0.5s;
 }
+
 .experiences:hover:after,
 .experiences:hover::before {
   width: 100%;
 }
+
 .experiences:hover::before {
   height: 50vh;
 }
+
 .experiences:before {
   content: "";
   position: absolute;
@@ -244,6 +230,7 @@ onMounted(() => {
   background-image: linear-gradient(to top, rgba(0 0 0/70%), transparent);
   opacity: 0;
 }
+
 .content .img_group :after {
   content: "";
   z-index: 20;

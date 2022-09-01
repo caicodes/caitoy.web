@@ -4,6 +4,7 @@
       <div>ui developer / frontend engineer / web producer</div>
       <div class="hidden md:flex gap-4">
         <a href="https://my.indeed.com/p/jjbg99p" target="_blank">resume</a> /
+        <a href="https://www.linkedin.com/in/cai-toy" target="_blank">linkedin</a> /
         <a href="https://github.com/caicodes" target="_blank">github</a>
       </div>
     </div>
