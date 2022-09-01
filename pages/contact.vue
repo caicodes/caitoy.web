@@ -1,42 +1,46 @@
 <template>
-  <div
-    class="flex flex-col align-middle place-content-center relative"
-    @mousemove="mouseMove"
-  >
+  <div class="flex flex-col align-middle place-content-center relative" @mousemove="mouseMove">
     <div ref="lgText" class="large-text file:hello opacity-5 absolute">
       contact
     </div>
 
-    <div
-      ref="lgBgText"
-      class="large-text-bg opacity-[1%] absolute bottom-0 text-base top-40 h-screen"
-    >
+    <div ref="lgBgText" class="large-text-bg opacity-[1%] absolute bottom-0 text-base top-40 h-screen">
       contact
     </div>
 
     <div class="main-text">
       <div class="line line1">
-        <p><NuxtLink to="/projects/project">voya destinations</NuxtLink></p>
+        <p>
+          <NuxtLink to="/projects/project">voya destinations</NuxtLink>
+        </p>
       </div>
       <div class="line line2">
-        <p><NuxtLink to="/projects/project">she's in her apron</NuxtLink></p>
+        <p>
+          <NuxtLink to="/projects/project">she's in her apron</NuxtLink>
+        </p>
       </div>
       <div class="line line3">
-        <p><NuxtLink to="/projects/project">hbo nuxt</NuxtLink></p>
+        <p>
+          <NuxtLink to="/projects/project">hbo nuxt</NuxtLink>
+        </p>
       </div>
       <div class="line line4">
-        <p><NuxtLink to="/projects/project">netflix react</NuxtLink></p>
+        <p>
+          <NuxtLink to="/projects/project">netflix react</NuxtLink>
+        </p>
       </div>
       <div class="line line5">
-        <p><NuxtLink to="/projects/project">coinwire live</NuxtLink></p>
+        <p>
+          <NuxtLink to="/projects/project">coinwire live</NuxtLink>
+        </p>
       </div>
-
       <div class="cursor-follow1 cursor"></div>
       <div class="cursor-follow2 cursor"></div>
       <div class="cursor-follow3 cursor"></div>
       <div class="cursor-follow4 cursor"></div>
       <div class="cursor-follow5 cursor"></div>
     </div>
+
     <Head>
       <Title>Cai Toy / About </Title>
     </Head>
@@ -44,6 +48,7 @@
 </template>
 
 <script setup>
+import { getAnalytics, logEvent } from "firebase/analytics";
 import gsap from "gsap"
 const titleTimeline = gsap.timeline()
 
@@ -70,6 +75,10 @@ onUnmounted(() => {
 })
 onMounted(() => {
   console.log("here i am to save the day...")
+
+  const analytics = getAnalytics();
+  logEvent(analytics, 'portfolio_contact_view');
+
   titleTimeline
     .fromTo(lgText.value, { xPercent: -100 }, { xPercent: 0 })
     .fromTo(
@@ -96,6 +105,7 @@ onMounted(() => {
 .main-text p {
   overflow: hidden;
 }
+
 .cursor {
   position: absolute;
   background-size: cover;
@@ -112,36 +122,44 @@ onMounted(() => {
   background: url("~/assets/images/projects/proj1.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
+
 .cursor-follow2 {
   background: url("~/assets/images/projects/proj2.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
+
 .cursor-follow3 {
   background: url("~/assets/images/projects/proj3.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
+
 .cursor-follow4 {
   background: url("~/assets/images/projects/proj4.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
+
 .cursor-follow5 {
   background: url("~/assets/images/projects/proj3.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
 
-.line1:hover ~ .cursor-follow1 {
+.line1:hover~.cursor-follow1 {
   opacity: 1;
 }
-.line2:hover ~ .cursor-follow2 {
+
+.line2:hover~.cursor-follow2 {
   opacity: 1;
 }
-.line3:hover ~ .cursor-follow3 {
+
+.line3:hover~.cursor-follow3 {
   opacity: 1;
 }
-.line4:hover ~ .cursor-follow4 {
+
+.line4:hover~.cursor-follow4 {
   opacity: 1;
 }
-.line5:hover ~ .cursor-follow5 {
+
+.line5:hover~.cursor-follow5 {
   opacity: 1;
 }
 
@@ -172,9 +190,11 @@ onMounted(() => {
   z-index: 2;
   @apply flex text-center flex-col font-light;
 }
+
 .main-text a {
   @apply px-8 py-4 rounded-md;
 }
+
 .main-text a:hover {
   color: var(--accent-focus);
   /* background: var(--accent-content); */

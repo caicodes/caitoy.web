@@ -44,6 +44,7 @@
 </template>
 
 <script setup>
+import { getAnalytics, logEvent } from "firebase/analytics";
 import gsap from "gsap"
 let posX = 0
 let posY = 0
@@ -70,7 +71,11 @@ onUnmounted(() => {
   console.log("gone now")
 })
 
+
+
 onMounted(() => {
+  const analytics = getAnalytics();
+  logEvent(analytics, 'portfolio_work_view');
   console.log("here i am to save the day...")
   titleTimeline
     .fromTo(lgText.value, { xPercent: -100 }, { xPercent: 0 })
