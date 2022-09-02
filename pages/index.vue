@@ -14,7 +14,6 @@
 
       <span @mouseleave="experiencesOff()" @mouseover="experiencesOn()" ref="experiences"
         class="experiences opacity-0">experiences</span>
-
     </div>
     <div class="img_group">
       <div class="img_group_inner">
