@@ -1,6 +1,5 @@
 {
     "editor.cursorBlinking": "phase",
-    "editor.semicolons": false,
     "emmet.includeLanguages": {
         "vue-html": "html",
         "javascript": "javascriptreact"

@@ -8,20 +8,16 @@
       </div>
 
       <div class="flex">
-        <div ref="itext" class="i opacity-0 mr-5 lg:mr-7">i</div>
-        <div ref="createtext" class="create opacity-0 z-30">create</div>
+        <div ref="i" class="i opacity-0 mr-5 lg:mr-7">i</div>
+        <div ref="create" class="create opacity-0 z-30">create</div>
       </div>
 
-      <span @mouseleave="experiencesOff()" @mouseover="experiencesOn()" ref="experiencestext"
+      <span @mouseleave="experiencesOff()" @mouseover="experiencesOn()" ref="experiences"
         class="experiences opacity-0">experiences</span>
+
     </div>
     <div class="img_group">
       <div class="img_group_inner">
-        <!-- <img ref="img1" src="~/assets/images/mobile/photo-4.jpg" alt="" />
-        <img ref="img2" src="~/assets/images/mobile/photo-3.jpg" alt="" />
-        <img ref="img3" src="~/assets/images/mobile/photo-2.jpg" alt="" /> -->
-        <!-- <img ref="img4" src="~/assets/images/mobile/photo-1.jpg" alt="" /> -->
-
         <Phone ref="phone1" imgSrc="/assets/images/mobile/photo-1.jpg" class="phone" />
         <Phone ref="phone2" imgSrc="/assets/images/mobile/photo-2.jpg" class="phone" />
         <Phone ref="phone3" imgSrc="/assets/images/mobile/photo-3.jpg" class="phone" />
@@ -34,7 +30,7 @@
 <script setup>
 import { ref, onMounted } from "vue"
 import gsap from "gsap"
-import Phone from "../components/app/mockups/Phone.vue"
+import Phone from "../components/app/mockups/PhoneBgImg.vue"
 
 const phone1 = ref()
 const phone2 = ref()
@@ -44,9 +40,9 @@ const phone4 = ref()
 const hello = ref()
 const im = ref()
 const cai = ref()
-const itext = ref()
-const createtext = ref()
-const experiencestext = ref()
+const i = ref()
+const create = ref()
+const experiences = ref()
 
 function experiencesOn() {
   console.log("yo on it")
@@ -103,17 +99,17 @@ onMounted(() => {
       ease: "easeIn",
     })
     .fromTo(
-      itext.value,
+      i.value,
       { opacity: 0, x: -40 },
       { opacity: 1, x: 0, delay: 0.5, duration: 0.35, ease: "power4.easeOut" }
     )
     .fromTo(
-      createtext.value,
+      create.value,
       { opacity: 0, x: -40 },
       { opacity: 1, x: 0, delay: 0, duration: 1.25, ease: "power4.easeOut" }
     )
     .fromTo(
-      experiencestext.value,
+      experiences.value,
       { opacity: 0, x: -40 },
       { opacity: 1, x: 0, delay: 0.25, duration: 2, ease: "power4.easeOut" }
     )
