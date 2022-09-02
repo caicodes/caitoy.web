@@ -11,3 +11,9 @@ https://caitoy.web.app/
 -   gsap
 -   nuxt/content
 -   pinia/nuxt
+
+## Portfolio pages...
+
+-   index
+-   work
+
