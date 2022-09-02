@@ -46,6 +46,7 @@
 <script setup>
 import { getAnalytics, logEvent } from "firebase/analytics";
 import gsap from "gsap"
+
 let posX = 0
 let posY = 0
 const mouseMove = (event) => {
@@ -62,8 +63,6 @@ const mouseMove = (event) => {
 const lgText = ref()
 const lgBgText = ref()
 
-const titleTimeline = gsap.timeline()
-// console.log(titleTimeline)
 onBeforeUnmount(() => {
   console.log("im too young to die")
 })
@@ -77,6 +76,8 @@ onMounted(() => {
   const analytics = getAnalytics();
   logEvent(analytics, 'portfolio_work_view');
   console.log("here i am to save the day...")
+
+  const titleTimeline = gsap.timeline()
   titleTimeline
     .fromTo(lgText.value, { xPercent: -100 }, { xPercent: 0 })
     .fromTo(

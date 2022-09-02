@@ -1,10 +1,12 @@
 {
     "editor.cursorBlinking": "phase",
+    "editor.semicolons": false,
     "emmet.includeLanguages": {
         "vue-html": "html",
         "javascript": "javascriptreact"
     },
     "[vue]": {
-        "editor.defaultFormatter": "Vue.volar"
+        "editor.defaultFormatter": "Vue.volar",
+        "editor.formatOnSave": true
     },
 }

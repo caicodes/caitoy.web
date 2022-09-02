@@ -48,9 +48,8 @@
 </template>
 
 <script setup>
-import { getAnalytics, logEvent } from "firebase/analytics";
+import { getAnalytics, logEvent } from "firebase/analytics"
 import gsap from "gsap"
-const titleTimeline = gsap.timeline()
 
 const lgText = ref()
 const lgBgText = ref()
@@ -76,9 +75,10 @@ onUnmounted(() => {
 onMounted(() => {
   console.log("here i am to save the day...")
 
-  const analytics = getAnalytics();
-  logEvent(analytics, 'portfolio_contact_view');
+  const analytics = getAnalytics()
+  logEvent(analytics, "portfolio_contact_view")
 
+  const titleTimeline = gsap.timeline()
   titleTimeline
     .fromTo(lgText.value, { xPercent: -100 }, { xPercent: 0 })
     .fromTo(

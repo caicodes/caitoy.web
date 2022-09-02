@@ -45,7 +45,6 @@ body {
   color: var(--base-content);
 }
 
-// page transition
 .page-enter-active {
   transition: all 0.3s ease-out;
 }
@@ -58,7 +57,6 @@ body {
   opacity: 0;
 }
 
-// layout transition
 .layout-enter-active {
   transition: all 0.1s ease-out;
 }
