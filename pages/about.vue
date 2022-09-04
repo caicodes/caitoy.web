@@ -31,7 +31,7 @@
       </div>
       <div class="line line5">
         <p>
-          <NuxtLink to="/projects/project">coinwire live</NuxtLink>
+          <NuxtLink to="/projects/project">mademoiselle</NuxtLink>
         </p>
       </div>
 
@@ -139,7 +139,7 @@ onMounted(() => {
 }
 
 .cursor-follow5 {
-  background: url("~/assets/images/projects/proj3.jpg") no-repeat 50% 50%;
+  background: url("~/assets/images/projects/proj5.jpg") no-repeat 50% 50%;
   opacity: 0;
 }
 

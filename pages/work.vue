@@ -30,11 +30,17 @@
           <NuxtLink to="/projects/project">project</NuxtLink>
         </p>
       </div>
+      <div class="line line5">
+        <p>
+          <NuxtLink to="/projects/project">project</NuxtLink>
+        </p>
+      </div>
 
       <div class="cursor-follow1 cursor"></div>
       <div class="cursor-follow2 cursor"></div>
       <div class="cursor-follow3 cursor"></div>
       <div class="cursor-follow4 cursor"></div>
+      <div class="cursor-follow5 cursor"></div>
     </div>
 
     <Head>
@@ -141,6 +147,11 @@ onMounted(() => {
   opacity: 0;
 }
 
+.cursor-follow5 {
+  background: url("~/assets/images/projects/proj5.jpg") no-repeat 50% 50%;
+  opacity: 0;
+}
+
 .line1:hover~.cursor-follow1 {
   opacity: 1;
 }
@@ -154,6 +165,10 @@ onMounted(() => {
 }
 
 .line4:hover~.cursor-follow4 {
+  opacity: 1;
+}
+
+.line5:hover~.cursor-follow5 {
   opacity: 1;
 }
 
