@@ -12,9 +12,11 @@
 <script setup>
 import firebase from './firebase/firebase'
 import { getAnalytics, logEvent } from "firebase/analytics";
+
 onMounted(() => {
   const analytics = getAnalytics(firebase)
   logEvent(analytics, "portfolio_app_view")
+
 })
 </script>
 
