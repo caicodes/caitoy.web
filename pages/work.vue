@@ -10,7 +10,7 @@
     </div>
 
     <div class="main-text">
-      <div class="line line1">
+      <!-- <div class="line line1">
         <p>
           <NuxtLink to="/projects/project">project</NuxtLink>
         </p>
@@ -29,18 +29,31 @@
         <p>
           <NuxtLink to="/projects/project">project</NuxtLink>
         </p>
-      </div>
+      </div> -->
       <div class="line line5">
         <p>
-          <NuxtLink to="/projects/project">project</NuxtLink>
+          <NuxtLink to="/projects/project">mademoiselle</NuxtLink>
         </p>
       </div>
+      <div class="line line7">
+        <p>
+          <NuxtLink to="/projects/project">mademoiselle collections</NuxtLink>
+        </p>
+      </div>
+      <div class="line line6">
+        <p>
+          <NuxtLink to="/projects/project">dashboard intelligence</NuxtLink>
+        </p>
+      </div>
+
 
       <div class="cursor-follow1 cursor"></div>
       <div class="cursor-follow2 cursor"></div>
       <div class="cursor-follow3 cursor"></div>
       <div class="cursor-follow4 cursor"></div>
       <div class="cursor-follow5 cursor"></div>
+      <div class="cursor-follow6 cursor"></div>
+      <div class="cursor-follow7 cursor"></div>
     </div>
 
     <Head>
@@ -152,6 +165,16 @@ onMounted(() => {
   opacity: 0;
 }
 
+.cursor-follow6 {
+  background: url("~/assets/images/projects/proj6.jpg") no-repeat 50% 50%;
+  opacity: 0;
+}
+
+.cursor-follow7 {
+  background: url("~/assets/images/projects/proj7.jpg") no-repeat 50% 50%;
+  opacity: 0;
+}
+
 .line1:hover~.cursor-follow1 {
   opacity: 1;
 }
@@ -169,6 +192,14 @@ onMounted(() => {
 }
 
 .line5:hover~.cursor-follow5 {
+  opacity: 1;
+}
+
+.line6:hover~.cursor-follow6 {
+  opacity: 1;
+}
+
+.line7:hover~.cursor-follow7 {
   opacity: 1;
 }
 
@@ -200,7 +231,13 @@ onMounted(() => {
   @apply flex text-center flex-col font-light;
 }
 
+.main-text a {
+  @apply px-8 py-4 rounded-md;
+}
+
 .main-text a:hover {
   color: var(--accent-focus);
+  /* background: var(--accent-content); */
+  @apply bg-accent text-accent-content rounded-lg;
 }
 </style>
