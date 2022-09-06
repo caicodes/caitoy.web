@@ -3,7 +3,6 @@
     <div ref="lgText" class="large-text opacity-5 absolute text-accent">
       work
     </div>
-
     <div ref="lgBgText" class="large-text-bg opacity-[1%] absolute bottom-0 text-base top-40 h-screen">
       work
     </div>
@@ -27,6 +26,11 @@
       <div class="line line7">
         <p>
           <NuxtLink to="/projects/project">mademoiselle collections</NuxtLink>
+        </p>
+      </div>
+      <div class="line line1">
+        <p>
+          <NuxtLink to="/projects/project">modolla wallet</NuxtLink>
         </p>
       </div>
       <div class="line line9">
@@ -75,14 +79,14 @@ import gsap from "gsap"
 let posX = 0
 let posY = 0
 const mouseMove = (event) => {
-// console.log("Mouse Moved ", event.x, event.y)
-posX = event.x
-posY = event.y
+  // console.log("Mouse Moved ", event.x, event.y)
+  posX = event.x
+  posY = event.y
 
-gsap.to(".cursor", {
-x: posX + 80,
-y: posY - 380,
-})
+  gsap.to(".cursor", {
+    x: posX + 80,
+    y: posY - 380,
+  })
 }
 
 const lgText = ref()
@@ -91,30 +95,30 @@ const lgBgText = ref()
 
 
 onMounted(() => {
-const analytics = getAnalytics()
-logEvent(analytics, "portfolio_work_view")
-console.log("here i am to save the day...")
+  const analytics = getAnalytics()
+  logEvent(analytics, "portfolio_work_view")
+  console.log("here i am to save the day...")
 
-const titleTimeline = gsap.timeline()
-titleTimeline
-.fromTo(lgText.value, { xPercent: -100 }, { xPercent: 0 })
-.fromTo(
-lgBgText.value,
-{
-xPercent: 0,
-yPercent: 0,
-scale: 0.5,
-opacity: 0,
-},
-{
-xPercent: 12.5,
-yPercent: 25,
-scale: 1.5,
-opacity: 0.008,
-delay: 0,
-duration: 0.2,
-}
-)
+  const titleTimeline = gsap.timeline()
+  titleTimeline
+    .fromTo(lgText.value, { xPercent: -100 }, { xPercent: 0 })
+    .fromTo(
+      lgBgText.value,
+      {
+        xPercent: 0,
+        yPercent: 0,
+        scale: 0.5,
+        opacity: 0,
+      },
+      {
+        xPercent: 12.5,
+        yPercent: 25,
+        scale: 1.5,
+        opacity: 0.008,
+        delay: 0,
+        duration: 0.2,
+      }
+    )
 })
 </script>
 
