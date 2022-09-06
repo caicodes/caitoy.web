@@ -18,6 +18,11 @@
           <NuxtLink to="/projects/project">voya destinations</NuxtLink>
         </p>
       </div>
+      <div class="line line2">
+        <p>
+          <NuxtLink to="/projects/project">coinwire</NuxtLink>
+        </p>
+      </div>
       <div class="line line5">
         <p>
           <NuxtLink to="/projects/project">mademoiselle</NuxtLink>
