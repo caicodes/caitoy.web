@@ -1,17 +1,15 @@
 <template>
   <div>
-    <div class="main-text flex flex-col align-middle relative">
+    <div class="main-text flex flex-col align-middle relative uppercase">
       <div ref="hello" class="hello opacity-0 absolute">hello</div>
       <div class="flex absolute">
         <div ref="im" class="im opacity-0 mr-5 lg:mr-7">i'm</div>
         <div ref="cai" class="cai opacity-0">cai</div>
       </div>
-
       <div class="flex">
         <div ref="i" class="i opacity-0 mr-5 lg:mr-7">i</div>
         <div ref="create" class="create opacity-0 z-30">create</div>
       </div>
-
       <span @mouseleave="experiencesOff()" @mouseover="experiencesOn()" ref="experiences"
         class="experiences opacity-0">experiences</span>
     </div>
@@ -65,6 +63,7 @@ function experiencesOff() {
     stagger: 0.14,
   })
 }
+
 
 onMounted(() => {
   const animation = gsap.timeline()
@@ -134,33 +133,31 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.content {
-  height: calc(100vh - 120px);
-  width: 100vw;
-  align-items: center;
-  display: flex;
-  position: relative;
-
-  @apply p-5;
+.img_group :before {
+  content: "";
+  z-index: 20;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0 0 0/70%), transparent);
+  opacity: 0;
 }
 
-.main-text {
-  font-size: 12vw;
-  font-weight: 400;
-  line-height: 10vw;
-  text-transform: uppercase;
-  text-align: left;
-  cursor: default;
-  width: 100vw;
-  z-index: 2;
-  @apply flex;
+.img_group :after {
+  content: "";
+  z-index: 20;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0 0 0/70%), transparent);
+  opacity: 0;
 }
 
-.img_group_inner {
-  display: flex;
-}
-
-.content .img_group {
+.img_group {
   position: absolute;
   top: 10%;
   left: 0;
@@ -170,7 +167,11 @@ onMounted(() => {
   z-index: 1;
 }
 
-.content .img_group .phone {
+.img_group_inner {
+  display: flex;
+}
+
+.img_group .phone {
   opacity: 0;
 
   z-index: 99;
@@ -212,29 +213,5 @@ onMounted(() => {
   transition: all ease 0.5s;
   z-index: -40;
   @apply blur-2xl;
-}
-
-.content .img_group :before {
-  content: "";
-  z-index: 20;
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to top, rgba(0 0 0/70%), transparent);
-  opacity: 0;
-}
-
-.content .img_group :after {
-  content: "";
-  z-index: 20;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom, rgba(0 0 0/70%), transparent);
-  opacity: 0;
 }
 </style>

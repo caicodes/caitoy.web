@@ -1,56 +1,52 @@
 <template>
   <div class="flex flex-col align-middle place-content-center relative" @mousemove="mouseMove">
-    <div ref="lgText" class="large-text file:hello opacity-5 absolute">
-      about
-    </div>
-
-    <div ref="lgBgText" class="large-text-bg opacity-[1%] absolute bottom-0 text-base top-40 h-screen">
-      about
-    </div>
-
     <div class="main-text">
-      <div class="line line1">
-        <p>
-          <NuxtLink to="/projects/project">voya destinations</NuxtLink>
-        </p>
+      <div v-for="link in portfolioLinks">
+        <PortfolioLink :link="link" />
       </div>
-      <div class="line line2">
-        <p>
-          <NuxtLink to="/projects/project">she's in her apron</NuxtLink>
-        </p>
-      </div>
-      <div class="line line3">
-        <p>
-          <NuxtLink to="/projects/project">hbo nuxt</NuxtLink>
-        </p>
-      </div>
-      <div class="line line4">
-        <p>
-          <NuxtLink to="/projects/project">netflix react</NuxtLink>
-        </p>
-      </div>
-      <div class="line line5">
-        <p>
-          <NuxtLink to="/projects/project">mademoiselle</NuxtLink>
-        </p>
-      </div>
-
-      <div class="cursor-follow1 cursor"></div>
-      <div class="cursor-follow2 cursor"></div>
-      <div class="cursor-follow3 cursor"></div>
-      <div class="cursor-follow4 cursor"></div>
-      <div class="cursor-follow5 cursor"></div>
     </div>
+    <!-- default -->
 
     <Head>
       <Title>Cai Toy / About </Title>
     </Head>
+    <div ref="lgText" class="large-text file:hello opacity-5 absolute">
+      about
+    </div>
+    <div ref="lgBgText" class="large-text-bg opacity-[1%] absolute bottom-0 text-base top-40 h-screen">
+      about
+    </div>
   </div>
 </template>
 
 <script setup>
 import { getAnalytics, logEvent } from "firebase/analytics"
 import gsap from "gsap"
+import PortfolioLink from "~~/components/app/PortfolioLink.vue"
+
+const portfolioLinks = [
+
+  {
+    title: "dashboard intelligence",
+    imgSrc: "../assets/images/projects/proj5.jpg",
+  },
+  {
+    title: "mademoiselle collections",
+    imgSrc: "../assets/images/projects/proj5.jpg",
+  },
+  {
+    title: "she's in her apron",
+    imgSrc: "../assets/images/projects/proj5.jpg",
+  },
+  {
+    title: "hbo vue",
+    imgSrc: "../assets/images/projects/proj5.jpg",
+  },
+  {
+    title: "netflix nuxt",
+    imgSrc: "../assets/images/projects/proj5.jpg",
+  },
+]
 
 const lgText = ref()
 const lgBgText = ref()
@@ -62,17 +58,12 @@ const mouseMove = (event) => {
   posX = event.x
   posY = event.y
 
-  gsap.to(".cursor", {
-    x: posX - 180,
-    y: posY - 380,
+  gsap.to(".follow", {
+    x: posX - 0,
+    y: posY - 400,
   })
 }
-onBeforeUnmount(() => {
-  console.log("im too young to die")
-})
-onUnmounted(() => {
-  console.log("gone now")
-})
+
 onMounted(() => {
   console.log("here i am to save the day...")
   const analytics = getAnalytics()
@@ -101,11 +92,7 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
-.main-text p {
-  overflow: hidden;
-}
-
+<style>
 .cursor {
   position: absolute;
   background-size: cover;
@@ -118,50 +105,6 @@ onMounted(() => {
   transform: translate(5px, 5px);
 }
 
-.cursor-follow1 {
-  background: url("~/assets/images/projects/proj1.jpg") no-repeat 50% 50%;
-  opacity: 0;
-}
-
-.cursor-follow2 {
-  background: url("~/assets/images/projects/proj2.jpg") no-repeat 50% 50%;
-  opacity: 0;
-}
-
-.cursor-follow3 {
-  background: url("~/assets/images/projects/proj3.jpg") no-repeat 50% 50%;
-  opacity: 0;
-}
-
-.cursor-follow4 {
-  background: url("~/assets/images/projects/proj4.jpg") no-repeat 50% 50%;
-  opacity: 0;
-}
-
-.cursor-follow5 {
-  background: url("~/assets/images/projects/proj5.jpg") no-repeat 50% 50%;
-  opacity: 0;
-}
-
-.line1:hover~.cursor-follow1 {
-  opacity: 1;
-}
-
-.line2:hover~.cursor-follow2 {
-  opacity: 1;
-}
-
-.line3:hover~.cursor-follow3 {
-  opacity: 1;
-}
-
-.line4:hover~.cursor-follow4 {
-  opacity: 1;
-}
-
-.line5:hover~.cursor-follow5 {
-  opacity: 1;
-}
 
 .large-text {
   font-size: 12vw;

@@ -15,7 +15,7 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 
 onMounted(() => {
   const analytics = getAnalytics(firebase)
-  logEvent(analytics, "portfolio_app_view")
+  // logEvent(analytics, "portfolio_app_view")
 
 })
 </script>
@@ -28,5 +28,36 @@ onMounted(() => {
   display: flex;
   position: relative;
   @apply p-5;
+}
+
+.main-text {
+  font-size: 12vw;
+  font-weight: 400;
+  line-height: 10vw;
+  text-align: left;
+  cursor: default;
+  width: 100vw;
+  z-index: 2;
+  @apply flex;
+}
+
+.line {
+  overflow: hidden;
+}
+
+.main-text p {
+  overflow: hidden;
+}
+
+.cursor {
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  width: 680px;
+  height: 383px;
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
+  transform: translate(5px, 5px);
 }
 </style>
