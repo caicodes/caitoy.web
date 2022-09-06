@@ -85,7 +85,7 @@ const mouseMove = (event) => {
 
   gsap.to(".cursor", {
     x: posX + 80,
-    y: posY - 380,
+    y: posY - 480,
   })
 }
 
@@ -136,7 +136,7 @@ onMounted(() => {
   background-size: cover;
   background-position: center center;
   width: 680px;
-  height: 383px;
+  /* height: 383px; */
   z-index: -1;
   user-select: none;
   pointer-events: none;
