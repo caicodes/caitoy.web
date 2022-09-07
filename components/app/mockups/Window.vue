@@ -1,6 +1,6 @@
 <template>
-    <div class="mockup-window border bg-base-300">
-        <div class="flex justify-center px-4 py-16 bg-base-200">
+    <div class="mockup-window border border-base-300 bg-base-300">
+        <div class="flex justify-center bg-base-200">
             <slot />
         </div>
     </div>

@@ -17,3 +17,13 @@ https://caitoy.web.app/
 -   index
 -   work
 
+
+## socials to update
+
+-   youtube
+-   twitter
+-   linkedin
+-   behance
+-   github
+
+
