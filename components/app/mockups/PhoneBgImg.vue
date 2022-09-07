@@ -24,5 +24,6 @@ const props = defineProps({
 .phone-1 {
   @apply bg-pink-500;
   background-size: cover;
+  background-position: center 70%;
 }
 </style>

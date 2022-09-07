@@ -38,6 +38,11 @@
           <NuxtLink to="/projects/project">modolla wallet</NuxtLink>
         </p>
       </div>
+      <div class="line line3">
+        <p>
+          <NuxtLink to="/projects/project">tailwind templates</NuxtLink>
+        </p>
+      </div>
       <div class="line line9">
         <p>
           <NuxtLink to="/projects/project">artasce client portal</NuxtLink>
@@ -161,7 +166,7 @@ onMounted(() => {
 }
 
 .cursor-follow3 {
-  background: url("~/assets/images/projects/proj3.jpg") no-repeat 50% 50%;
+  background: url("~/assets/images/projects/proj3.jpg") no-repeat 50% top;
   opacity: 0;
   z-index: 999;
 }
