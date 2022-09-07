@@ -30,16 +30,13 @@
 
 <script setup>
 
-  import { ref, onMounted } from "vue"
-  import gsap from "gsap"
+import { ref, onMounted } from "vue"
+import gsap from "gsap"
 
-  const lgText = ref()
-  const lgBgText = ref()
-
-
+const lgText = ref()
+const lgBgText = ref()
 
 onMounted(() => {
-
 
   const titleTimeline = gsap.timeline()
   titleTimeline
