@@ -22,8 +22,9 @@ const props = defineProps({
 } */
 
 .phone-1 {
-  @apply bg-pink-500;
+  @apply bg-primary;
   background-size: cover;
   background-position: center 70%;
+  background-repeat: no-repeat;
 }
 </style>

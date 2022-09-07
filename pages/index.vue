@@ -17,7 +17,7 @@
       <div class="img_group_inner">
         <Phone ref="phone1" imgSrc="/images/mobile/photo-1.jpg" class="phone" />
         <Phone ref="phone2" imgSrc="/images/mobile/photo-2.jpg" class="phone" />
-        <Phone ref="phone3" imgSrc="/images/mobile/photo-3.jpg" class="phone" />
+        <Phone ref="phone3" imgSrc="/images/mobile/coinwire-landing-mobile.png" class="phone" />
         <Phone ref="phone4" imgSrc="/images/mobile/voya-landing-mobile.jpg" class="phone" />
       </div>
     </div>
