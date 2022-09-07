@@ -26,4 +26,4 @@ https://caitoy.web.app/
 -   behance
 -   github
 
-
+> NOTE: discovered a tip on phone resolution/size... using the phone-4 should give a better aspect ratio for the existing screens I have... need to build more using a perfect fit
