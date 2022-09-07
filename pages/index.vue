@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="main-text flex flex-col align-middle relative uppercase">
+    <div class="welcome-text flex flex-col align-middle relative uppercase">
       <div ref="hello" class="hello opacity-0 absolute">hello</div>
       <div class="flex absolute">
         <div ref="im" class="im opacity-0 mr-5 lg:mr-7">i'm</div>
@@ -63,7 +63,6 @@ function experiencesOff() {
     stagger: 0.14,
   })
 }
-
 
 onMounted(() => {
   const animation = gsap.timeline()
@@ -132,7 +131,7 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
+<style>
 .img_group :before {
   content: "";
   z-index: 20;

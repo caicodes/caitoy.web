@@ -45,6 +45,22 @@ body {
   color: var(--base-content);
 }
 
+.welcome-text {
+  font-size: 12vw;
+  font-weight: 400;
+  line-height: 10vw;
+  text-align: left;
+  cursor: default;
+  width: 100vw;
+  z-index: 2;
+  @apply flex;
+}
+
+/* 
+* nuxt 
+* transitions 
+*
+*/
 .page-enter-active {
   transition: all 0.3s ease-out;
 }
