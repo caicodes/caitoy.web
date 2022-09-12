@@ -7,8 +7,7 @@
           <div class="h-12"></div>
           <div class="text-2xl leading-loose px-20 flex justify-end">
             <div class="w-2/3">I am a solid website producer with end to end experience and the ability
-              to
-              work on teams
+              to work on teams
               as well as
               individually. I enjoy coding and design equally and aside from websites, I create brands, logos, marketing
               and promotional designs, motion graphics, videos, and even product photography.
@@ -37,38 +36,9 @@
 </template>
 
 <script setup>
-import { getAnalytics, logEvent } from "firebase/analytics"
+// import { getAnalytics, logEvent } from "firebase/analytics"
+import { socialLinks } from "~~/constants";
 import gsap from "gsap"
-
-const socialLinks = [
-
-  {
-    linkTitle: "github",
-    linkUrl: "https://github.com/caicodes",
-  },
-  {
-    linkTitle: "youtube",
-    linkUrl: "https://www.youtube.com/channel/UCnS8ijumElXzBHIDKgoIBMg",
-  },
-  {
-    linkTitle: "linkedin",
-    linkUrl: "https://www.linkedin.com/in/cai-toy/",
-  },
-  {
-    linkTitle: "twitter",
-    linkUrl: "https://twitter.com/artascecreative",
-  },
-  {
-    linkTitle: "pinterest",
-    linkUrl: "https://www.pinterest.com/artascecreative/artasce-creative/",
-
-  },
-  {
-    linkTitle: "codepen",
-    linkUrl: "https://codepen.io/caicodes/pens/popular",
-  },
-
-]
 
 const lgText = ref()
 const lgBgText = ref()

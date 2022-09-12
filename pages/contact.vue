@@ -47,40 +47,6 @@ import gsap from "gsap"
 const lgText = ref()
 const lgBgText = ref()
 
-const socialLinks = [
-
-  {
-    linkTitle: "github",
-    linkUrl: "https://github.com/caicodes",
-    linkIconSvg: "",
-  },
-  {
-    linkTitle: "youtube",
-    linkUrl: "https://www.youtube.com/channel/UCnS8ijumElXzBHIDKgoIBMg",
-    linkIconSvg: "",
-  },
-  {
-    linkTitle: "linkedin",
-    linkUrl: "https://www.linkedin.com/in/cai-toy/",
-    linkIconSvg: "",
-  },
-  {
-    linkTitle: "twitter",
-    linkUrl: "https://twitter.com/artascecreative",
-    linkIconSvg: "",
-  },
-  {
-    linkTitle: "pinterest",
-    linkUrl: "https://www.pinterest.com/artascecreative/artasce-creative/",
-    linkIconSvg: "",
-  },
-  {
-    linkTitle: "codepen",
-    linkUrl: "https://codepen.io/caicodes/pens/popular",
-    linkIconSvg: "",
-  },
-
-]
 onMounted(() => {
 
   const titleTimeline = gsap.timeline()

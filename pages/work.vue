@@ -139,8 +139,6 @@ onMounted(() => {
   z-index: 999;
 }
 
-
-
 .cursor-follow5 {
   background: url("~/assets/images/projects/proj5.jpg") no-repeat 50% 50%;
   opacity: 0;
