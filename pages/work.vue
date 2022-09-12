@@ -1,47 +1,29 @@
 <template>
   <div class="flex flex-col align-middle place-content-center relative" @mousemove="mouseMove">
-
-
     <div class="main-text">
       <div class="line line6">
-        <p>
-          <NuxtLink to="/project/dashboard-intelligence">dashboard intelligence</NuxtLink>
-        </p>
+        <NuxtLink to="/project/dashboard-intelligence">dashboard intelligence</NuxtLink>
       </div>
       <div class="line line8">
-        <p>
-          <NuxtLink to="/project/voya-destinations">voya destinations</NuxtLink>
-        </p>
+        <NuxtLink to="/project/voya-destinations">voya destinations</NuxtLink>
       </div>
       <div class="line line2">
-        <p>
-          <NuxtLink to="/project/coinwire">coinwire</NuxtLink>
-        </p>
+        <NuxtLink to="/project/coinwire">coinwire</NuxtLink>
       </div>
       <div class="line line5">
-        <p>
-          <NuxtLink to="/project/mademoiselle">mademoiselle</NuxtLink>
-        </p>
+        <NuxtLink to="/project/mademoiselle">mademoiselle</NuxtLink>
       </div>
       <div class="line line7">
-        <p>
-          <NuxtLink to="/project/mademoiselle-collections">mademoiselle collections</NuxtLink>
-        </p>
+        <NuxtLink to="/project/mademoiselle-collections">mademoiselle collections</NuxtLink>
       </div>
       <div class="line line1">
-        <p>
-          <NuxtLink to="/project/modolla-wallet">modolla wallet</NuxtLink>
-        </p>
+        <NuxtLink to="/project/modolla">modolla wallet</NuxtLink>
       </div>
       <div class="line line3">
-        <p>
-          <NuxtLink to="/project/tailwind-templates">tailwind templates</NuxtLink>
-        </p>
+        <NuxtLink to="/project/tailwind-templates">tailwind templates</NuxtLink>
       </div>
       <div class="line line9">
-        <p>
-          <NuxtLink to="/project/artasce-client-portal">artasce client portal</NuxtLink>
-        </p>
+        <NuxtLink to="/project/artasce-client-portal">artasce client portal</NuxtLink>
       </div>
       <div class="cursor-follow1 cursor"></div>
       <div class="cursor-follow2 cursor"></div>

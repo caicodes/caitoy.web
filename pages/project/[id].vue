@@ -1,20 +1,19 @@
 <template>
   <div class="w-full h-screen flex flex-col align-middle place-content-center relative">
     <!-- main display section -->
-    <div class="flex z-50 gap-4">
-      <div ref="projectCard" class="shadow-2xl card bg-base-300 text-primary-content w-1/3">
+    <div class="project-display">
+      <div ref="projectCard" class="project-card">
         <div class="card-body">
-          <h2 class="card-title">project title {{ $route.params.id }}s</h2>
-          <p>the description... dynamic image ref... time to set it up, let's start with a basic rig...</p>
+          <h2 class="card-title">{{project.name}}</h2>
+          <div>{{project.desc}}</div>
           <div class="card-actions justify-end">
-            <button class="btn">visit site</button>
+            <a class="btn" :href="project.url" :title="project.name" target="_blank">visit site</a>
           </div>
         </div>
       </div>
-      <div ref="projectWindow" class="w-2/3">
-        <AppMockupsWindow class="shadow-2xl overflow-hidden project-window">
-          <img :src="imgSrc" alt="" ref="projectPic" class="project-landing-photo" />
-          {{imgSrc}}
+      <div ref="projectWindow">
+        <AppMockupsWindow class="project-window">
+          <img :src="project.thumb" :alt="project.name" ref="projectPic" class="project-landing-photo" />
         </AppMockupsWindow>
       </div>
     </div>
@@ -26,7 +25,7 @@
     </div>
 
     <Head>
-      <Title>Cai Toy / Projects </Title>
+      <Title>Cai Toy / Project {{project.name}} </Title>
     </Head>
     <div ref="lgText" class="large-text opacity-5 absolute">
       project
@@ -38,8 +37,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue"
+import { ref, onMounted, computed } from "vue"
 import gsap from "gsap"
+import { projectList } from "~/constants";
 
 const lgText = ref()
 const lgBgText = ref()
@@ -49,7 +49,14 @@ const projectCard = ref()
 const projectWindow = ref()
 
 const route = useRoute();
-const imgSrc = route.params.id
+const projectId = route.params.id
+
+// const getProjectInfo = (projectList, projectId) => {
+console.log('getProjectInfo', projectId, projectList)
+
+const project = computed(() => {
+  return projectList.find(proj => proj.id == projectId)
+})
 
 onMounted(() => {
 
@@ -94,6 +101,22 @@ onMounted(() => {
 </script>
 
 <style>
+.project-display {
+  @apply flex z-50 gap-4 w-full;
+}
+
+.project-card {
+  @apply shadow-2xl card bg-base-300 text-primary-content w-2/3;
+}
+
+.project-window {
+  @apply shadow-2xl overflow-hidden;
+}
+
+.card-title {
+  @apply text-2xl;
+}
+
 .back-link {
   @apply z-50 text-3xl relative;
 }
@@ -116,10 +139,11 @@ onMounted(() => {
   cursor: default;
 }
 
-.project-landing-photo {
-  width: 960px;
+/* .project-landing-photo {
+  width: 960px; }
+
   /* transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1); */
-}
+
 
 /* 
 .project-landing-photo:hover {
