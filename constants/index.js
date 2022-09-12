@@ -47,8 +47,8 @@ export const projectList = [
   {
     id: "mademoiselle-collections",
     name: "Mademoiselle Collections",
-    thumb: "/images/projects/thumb-mademoiselle-collections.jpg",
-    landing: "/images/projects/landing-mademoiselle-collections.jpg",
+    thumb: "/images/projects/thumbs/mademoiselle-collections.jpg",
+    landing: "/images/projects/landings/mademoiselle-collections.jpg",
     desc: "Mademoiselle Collections is a micro-site with collections portal into the Mademoiselle E-commerce site.",
     url: "https://mademoiselle-collections.netlify.app/",
     gitUrl: "https://github.com/caicodes/",

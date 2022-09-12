@@ -1,22 +1,25 @@
 <template>
-  <div class="flex flex-col align-middle place-content-center relative">
+  <div class="flex flex-col align-middle place-content-center relative w-full h-screen">
     <div class="content-main-text">
-      <div>
-        <div class="p-8">UX/UI DESIGNER & SENIOR SOFTWARE ENGINEER</div>
-        <div class="p-8">
-          I am a solid website producer with end to end experience and the ability to work on teams as well as
-          individually. I enjoy coding and design equally and aside from websites, I create brands, logos, marketing and
-          promotional designs, motion graphics, videos, and even product photography.</div>
-      </div>
-      <div class="flex mx-auto py-4 gap-4">
-        <a class="btn btn-circle" v-for="social in socialLinks" :key="social" :href="social.linkUrl" target="_blank">
-          <Github class="social-icon" v-if="social.linkTitle === 'github'" />
-          <Youtube class="social-icon" v-if="social.linkTitle === 'youtube'" />
-          <Twitter class="social-icon" v-if="social.linkTitle === 'twitter'" />
-          <Codepen class="social-icon" v-if="social.linkTitle === 'codepen'" />
-          <Linkedin class="social-icon" v-if="social.linkTitle === 'linkedin'" />
-          <Pinterest class="social-icon" v-if="social.linkTitle === 'pinterest'" />
-        </a>
+      <div class="flex w-full">
+        <div class="w-2/3 text-right pt-24">
+          <div class="px-20 text-4xl">UX/UI DESIGNER & SENIOR SOFTWARE ENGINEER</div>
+          <div class="h-12"></div>
+          <div class="text-2xl leading-loose px-20 flex justify-end">
+            <div class="w-2/3">I am a solid website producer with end to end experience and the ability
+              to
+              work on teams
+              as well as
+              individually. I enjoy coding and design equally and aside from websites, I create brands, logos, marketing
+              and promotional designs, motion graphics, videos, and even product photography.
+              <div class="h-8"></div>
+              <a href="https://cai-resume.web.app" target="_blank" class="btn btn-primary">visit resume site</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-1/3">
+          <img src="/images/projects/mockups/mademoiselle_mockup.png" alt="" />
+        </div>
       </div>
     </div>
     <!-- default -->
@@ -36,12 +39,6 @@
 <script setup>
 import { getAnalytics, logEvent } from "firebase/analytics"
 import gsap from "gsap"
-import Github from "../components/app/icons/Github.vue"
-import Youtube from "../components/app/icons/Youtube.vue"
-import Twitter from "../components/app/icons/Twitter.vue"
-import Codepen from "../components/app/icons/Codepen.vue"
-import Linkedin from "../components/app/icons/Linkedin.vue"
-import Pinterest from "../components/app/icons/Pinterest.vue"
 
 const socialLinks = [
 
@@ -76,7 +73,6 @@ const socialLinks = [
 const lgText = ref()
 const lgBgText = ref()
 
-
 onMounted(() => {
   console.log("about page...")
   // const analytics = getAnalytics()
@@ -95,7 +91,7 @@ onMounted(() => {
       },
       {
         xPercent: 12.5,
-        yPercent: 25,
+        y: 800,
         scale: 1.5,
         opacity: 0.008,
         delay: 0,
@@ -142,11 +138,9 @@ onMounted(() => {
 }
 
 .content-main-text {
-  font-size: 2vw;
   line-height: 3vw;
   text-align: left;
   cursor: default;
-  width: 100vw;
   z-index: 2;
   @apply flex text-center flex-col font-light;
 }

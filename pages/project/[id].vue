@@ -13,7 +13,7 @@
       </div>
       <div ref="projectWindow">
         <AppMockupsWindow class="project-window">
-          <img :src="project.thumb" :alt="project.name" ref="projectPic" class="project-landing-photo" />
+          <img :src="project.landing" :alt="project.name" ref="projectPic" class="project-landing-photo" />
         </AppMockupsWindow>
       </div>
     </div>
@@ -135,16 +135,4 @@ onMounted(() => {
   text-align: left;
   cursor: default;
 }
-
-/* .project-landing-photo {
-  width: 960px; }
-
-  /* transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1); */
-
-
-/* 
-.project-landing-photo:hover {
-  width: 960px;
-} 
-*/
 </style>
