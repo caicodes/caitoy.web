@@ -7,6 +7,9 @@
       <div class="line line8">
         <NuxtLink to="/project/voya-destinations">voya destinations</NuxtLink>
       </div>
+      <div class="line line-shesinherapron">
+        <NuxtLink to="/project/shesinherapron">shes in her apron</NuxtLink>
+      </div>
       <div class="line line2">
         <NuxtLink to="/project/coinwire">coinwire</NuxtLink>
       </div>
@@ -28,12 +31,12 @@
       <div class="cursor-follow1 cursor"></div>
       <div class="cursor-follow2 cursor"></div>
       <div class="cursor-follow3 cursor"></div>
-      <div class="cursor-follow4 cursor"></div>
       <div class="cursor-follow5 cursor"></div>
       <div class="cursor-follow6 cursor"></div>
       <div class="cursor-follow7 cursor"></div>
       <div class="cursor-follow8 cursor"></div>
       <div class="cursor-follow9 cursor"></div>
+      <div class="cursor-follow-shesinherapron cursor"></div>
     </div>
     <!-- default contents -->
 
@@ -136,11 +139,7 @@ onMounted(() => {
   z-index: 999;
 }
 
-.cursor-follow4 {
-  background: url("~/assets/images/projects/proj4.jpg") no-repeat 50% 50%;
-  opacity: 0;
-  z-index: 999;
-}
+
 
 .cursor-follow5 {
   background: url("~/assets/images/projects/proj5.jpg") no-repeat 50% 50%;
@@ -174,6 +173,13 @@ onMounted(() => {
   z-index: 999;
 }
 
+.cursor-follow-shesinherapron {
+  background: url("/images/projects/thumbs/shesinherapron.jpg") no-repeat;
+  background-position: center top;
+  opacity: 0;
+  z-index: 999;
+}
+
 .line1:hover~.cursor-follow1 {
   opacity: 1;
   z-index: 999;
@@ -189,10 +195,11 @@ onMounted(() => {
   z-index: 999;
 }
 
-.line4:hover~.cursor-follow4 {
+.line-shesinherapron:hover~.cursor-follow-shesinherapron {
   opacity: 1;
   z-index: 999;
 }
+
 
 .line5:hover~.cursor-follow5 {
   opacity: 1;

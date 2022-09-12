@@ -20,8 +20,8 @@ export const projectList = [
   {
     id: "shesinherapron",
     name: "She's In Her Arpon",
-    thumb: "/images/projects/landings/shesinherapron.jpg",
-    landing: "/images/projects/thumbs/shesinherapron.jpg",
+    thumb: "/images/projects/thumbs/shesinherapron.jpg",
+    landing: "/images/projects/landings/shesinherapron.jpg",
     desc: "YouTube Influencer blog and ecommerce site.",
     url: "https://shesinherapron.com/",
     gitUrl: "https://github.com/caicodes/",
