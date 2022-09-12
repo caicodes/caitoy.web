@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col align-middle place-content-center relative" @mousemove="mouseMove">
+  <div class="flex flex-col align-middle place-content-center relative w-full h-screen" @mousemove="mouseMove">
     <div class="main-text">
       <div class="line line6">
         <NuxtLink to="/project/dashboard-intelligence">dashboard intelligence</NuxtLink>
@@ -84,13 +84,13 @@ onMounted(() => {
       lgBgText.value,
       {
         xPercent: 0,
-        yPercent: 0,
+        y: 0,
         scale: 0.5,
         opacity: 0,
       },
       {
         xPercent: 12.5,
-        yPercent: 25,
+        y: 400,
         scale: 1.5,
         opacity: 0.008,
         delay: 0,
@@ -243,13 +243,13 @@ onMounted(() => {
 }
 
 .main-text {
-  font-size: 2vw;
-  line-height: 3vw;
-  text-align: left;
+  font-size: 2rem;
+  font-size: clamp(32px, 4vw, 48px);
+  text-align: center;
+  line-height: normal;
   cursor: default;
-  width: 100vw;
   z-index: 2;
-  @apply flex text-center flex-col font-light;
+  @apply flex text-center flex-col font-light w-full;
 }
 
 .main-text a {

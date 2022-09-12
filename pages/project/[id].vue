@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-screen flex flex-col align-middle place-content-center relative">
     <!-- main display section -->
-    <div class="project-display">
+    <div class="project-display flex-col md:flex-row">
       <div ref="projectCard" class="project-card">
         <div class="card-body">
           <h2 class="card-title">{{project.name}}</h2>

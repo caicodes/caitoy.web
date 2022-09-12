@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col align-middle place-content-center relative">
+  <div class="flex flex-col align-middle place-content-center relative w-full h-screen">
     <div class="main-text">
       <div class="links">email/cai@artasce.com</div>
       <div class="links">github/@caicodes</div>
@@ -34,15 +34,15 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue"
+import gsap from "gsap"
 import Github from "../components/app/icons/Github.vue"
 import Youtube from "../components/app/icons/Youtube.vue"
 import Twitter from "../components/app/icons/Twitter.vue"
 import Codepen from "../components/app/icons/Codepen.vue"
 import Linkedin from "../components/app/icons/Linkedin.vue"
 import Pinterest from "../components/app/icons/Pinterest.vue"
-
-import { ref, onMounted } from "vue"
-import gsap from "gsap"
+import { socialLinks } from '~/constants'
 
 const lgText = ref()
 const lgBgText = ref()
@@ -50,7 +50,6 @@ const lgBgText = ref()
 onMounted(() => {
 
   const titleTimeline = gsap.timeline()
-  titleTimeline
     .fromTo(lgText.value, { xPercent: -100 }, { xPercent: 0 })
     .fromTo(
       lgBgText.value,
@@ -62,7 +61,7 @@ onMounted(() => {
       },
       {
         xPercent: 12.5,
-        yPercent: 25,
+        y: 800,
         scale: 1.5,
         opacity: 0.008,
         delay: 0,
@@ -96,13 +95,13 @@ onMounted(() => {
 }
 
 .main-text {
-  font-size: 2vw;
-  line-height: 3vw;
+  font-size: 2rem;
+  font-size: clamp(32px, 4vw, 48px);
   text-align: center;
+  line-height: normal;
   cursor: default;
-  width: 100vw;
   z-index: 2;
-  @apply flex text-center flex-col font-light;
+  @apply flex text-center flex-col font-light w-full;
 }
 
 .links {

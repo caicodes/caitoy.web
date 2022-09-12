@@ -107,12 +107,15 @@ onMounted(() => {
   cursor: default;
 }
 
+
 .content-main-text {
-  line-height: 3vw;
-  text-align: left;
+  font-size: 2rem;
+  font-size: clamp(32px, 4vw, 48px);
+  text-align: center;
+  line-height: normal;
   cursor: default;
   z-index: 2;
-  @apply flex text-center flex-col font-light;
+  @apply flex text-center flex-col font-light w-full;
 }
 
 .content-main-text a svg {
