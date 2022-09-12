@@ -1,8 +1,18 @@
 <template>
   <div class="flex flex-col align-middle place-content-center relative" @mousemove="mouseMove">
-    <div class="main-text">
-      <div v-for="link in portfolioLinks">
-        <PortfolioLink :link="link" />
+    <div class="content-main-text">
+      <div>
+        <div>what do I want to say?</div>
+      </div>
+      <div class="flex mx-auto py-4 gap-4">
+        <a class="btn btn-circle" v-for="social in socialLinks" :key="link" :href="social.linkUrl" target="_blank">
+          <Github class="social-icon" v-if="social.linkTitle === 'github'" />
+          <Youtube class="social-icon" v-if="social.linkTitle === 'youtube'" />
+          <Twitter class="social-icon" v-if="social.linkTitle === 'twitter'" />
+          <Codepen class="social-icon" v-if="social.linkTitle === 'codepen'" />
+          <Linkedin class="social-icon" v-if="social.linkTitle === 'linkedin'" />
+          <Pinterest class="social-icon" v-if="social.linkTitle === 'pinterest'" />
+        </a>
       </div>
     </div>
     <!-- default -->
@@ -22,30 +32,41 @@
 <script setup>
 import { getAnalytics, logEvent } from "firebase/analytics"
 import gsap from "gsap"
-import PortfolioLink from "~~/components/app/PortfolioLink.vue"
+import Github from "../components/app/icons/Github.vue"
+import Youtube from "../components/app/icons/Youtube.vue"
+import Twitter from "../components/app/icons/Twitter.vue"
+import Codepen from "../components/app/icons/Codepen.vue"
+import Linkedin from "../components/app/icons/Linkedin.vue"
+import Pinterest from "../components/app/icons/Pinterest.vue"
 
-const portfolioLinks = [
+const socialLinks = [
 
   {
-    title: "dashboard intelligence",
-    imgSrc: "../assets/images/projects/proj5.jpg",
+    linkTitle: "github",
+    linkUrl: "https://github.com/caicodes",
   },
   {
-    title: "mademoiselle collections",
-    imgSrc: "../assets/images/projects/proj5.jpg",
+    linkTitle: "youtube",
+    linkUrl: "https://www.youtube.com/channel/UCnS8ijumElXzBHIDKgoIBMg",
   },
   {
-    title: "she's in her apron",
-    imgSrc: "../assets/images/projects/proj5.jpg",
+    linkTitle: "linkedin",
+    linkUrl: "https://www.linkedin.com/in/cai-toy/",
   },
   {
-    title: "hbo vue",
-    imgSrc: "../assets/images/projects/proj5.jpg",
+    linkTitle: "twitter",
+    linkUrl: "https://twitter.com/artascecreative",
   },
   {
-    title: "netflix nuxt",
-    imgSrc: "../assets/images/projects/proj5.jpg",
+    linkTitle: "pinterest",
+    linkUrl: "https://www.pinterest.com/artascecreative/artasce-creative/",
+
   },
+  {
+    linkTitle: "codepen",
+    linkUrl: "https://codepen.io/caicodes/pens/popular",
+  },
+
 ]
 
 const lgText = ref()
@@ -66,8 +87,8 @@ const mouseMove = (event) => {
 
 onMounted(() => {
   console.log("here i am to save the day...")
-  const analytics = getAnalytics()
-  logEvent(analytics, "portfolio_about_view")
+  // const analytics = getAnalytics()
+  // logEvent(analytics, "portfolio_about_view")
 
   const titleTimeline = gsap.timeline()
   titleTimeline
@@ -92,7 +113,13 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
+.social-icon {
+  @apply text-accent h-8 w-8 absolute;
+}
+
+
+
 .cursor {
   position: absolute;
   background-size: cover;
@@ -124,7 +151,7 @@ onMounted(() => {
   cursor: default;
 }
 
-.main-text {
+.content-main-text {
   font-size: 2vw;
   line-height: 3vw;
   text-align: left;
@@ -134,13 +161,11 @@ onMounted(() => {
   @apply flex text-center flex-col font-light;
 }
 
-.main-text a {
-  @apply px-8 py-4 rounded-md;
+.content-main-text a svg {
+  color: var(--accent);
 }
 
-.main-text a:hover {
-  color: var(--accent-focus);
-  /* background: var(--accent-content); */
-  @apply bg-accent text-accent-content rounded-lg;
+.content-main-text a:hover svg {
+  color: white;
 }
 </style>

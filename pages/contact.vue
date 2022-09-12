@@ -9,6 +9,19 @@
       <div class="links">wp/cai.artasce.com</div>
       <div class="links">resume/cai-resume.web.app</div>
       <div class="links">cv/cai-toy.web.app</div>
+
+
+      <div class="flex mx-auto py-4 gap-4">
+        <a class="btn btn-circle" v-for="social in socialLinks" :key="link" :href="social.linkUrl" target="_blank">
+          <Github class="social-icon" v-if="social.linkTitle === 'github'" />
+          <Youtube class="social-icon" v-if="social.linkTitle === 'youtube'" />
+          <Twitter class="social-icon" v-if="social.linkTitle === 'twitter'" />
+          <Codepen class="social-icon" v-if="social.linkTitle === 'codepen'" />
+          <Linkedin class="social-icon" v-if="social.linkTitle === 'linkedin'" />
+          <Pinterest class="social-icon" v-if="social.linkTitle === 'pinterest'" />
+        </a>
+      </div>
+
     </div>
 
 
@@ -29,6 +42,12 @@
 </template>
 
 <script setup>
+import Github from "../components/app/icons/Github.vue"
+import Youtube from "../components/app/icons/Youtube.vue"
+import Twitter from "../components/app/icons/Twitter.vue"
+import Codepen from "../components/app/icons/Codepen.vue"
+import Linkedin from "../components/app/icons/Linkedin.vue"
+import Pinterest from "../components/app/icons/Pinterest.vue"
 
 import { ref, onMounted } from "vue"
 import gsap from "gsap"
@@ -36,6 +55,41 @@ import gsap from "gsap"
 const lgText = ref()
 const lgBgText = ref()
 
+
+const socialLinks = [
+
+  {
+    linkTitle: "github",
+    linkUrl: "https://github.com/caicodes",
+    linkIconSvg: "",
+  },
+  {
+    linkTitle: "youtube",
+    linkUrl: "https://www.youtube.com/channel/UCnS8ijumElXzBHIDKgoIBMg",
+    linkIconSvg: "",
+  },
+  {
+    linkTitle: "linkedin",
+    linkUrl: "https://www.linkedin.com/in/cai-toy/",
+    linkIconSvg: "",
+  },
+  {
+    linkTitle: "twitter",
+    linkUrl: "https://twitter.com/artascecreative",
+    linkIconSvg: "",
+  },
+  {
+    linkTitle: "pinterest",
+    linkUrl: "https://www.pinterest.com/artascecreative/artasce-creative/",
+    linkIconSvg: "",
+  },
+  {
+    linkTitle: "codepen",
+    linkUrl: "https://codepen.io/caicodes/pens/popular",
+    linkIconSvg: "",
+  },
+
+]
 onMounted(() => {
 
   const titleTimeline = gsap.timeline()
@@ -62,6 +116,10 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.social-icon {
+  @apply text-accent h-8 w-8 absolute;
+}
+
 .large-text {
   font-size: 12vw;
   font-weight: 400;

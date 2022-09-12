@@ -54,7 +54,6 @@ const backLink = ref()
 const projectPic = ref()
 const projectWindow = ref()
 
-
 onMounted(() => {
   gsap.fromTo(projectWindow.value, { y: 0, opacity: 0 }, { opacity: 1, y: -50, delay: .618 })
   const picTimeline = gsap.timeline()
