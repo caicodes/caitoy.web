@@ -103,7 +103,7 @@ onMounted(() => {
 }
 
 .project-card {
-  @apply shadow-2xl card bg-base-300 text-primary-content w-2/3;
+  @apply shadow-2xl card bg-base-300 text-primary-content w-2/3 h-min;
 }
 
 .project-window {

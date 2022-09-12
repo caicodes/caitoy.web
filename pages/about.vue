@@ -1,12 +1,13 @@
 <template>
-  <div class="flex flex-col align-middle place-content-center relative w-full h-screen">
+  <div class="flex flex-col align-middle place-content-center relative w-full h-screen overflow-hidden">
     <div class="content-main-text">
-      <div class="flex w-full">
-        <div class="w-2/3 text-right pt-24">
-          <div class="px-20 text-4xl">UX/UI DESIGNER & SENIOR SOFTWARE ENGINEER</div>
+      <div class="flex flex-col md:flex-row">
+        <div class="lg:w-2/3 text-right pt-24">
+          <div class="px-8 lg:px-20 md:text-4xl text-3xl">UX/UI DESIGNER & SENIOR SOFTWARE ENGINEER</div>
           <div class="h-12"></div>
-          <div class="text-2xl leading-loose px-20 flex justify-end">
-            <div class="w-2/3">I am a solid website producer with end to end experience and the ability
+          <div class="leading-loose px-8 lg:px-20 flex justify-end">
+            <div class="lg:w-2/3 text-2xl">I am a solid website producer with end to end experience and the
+              ability
               to work on teams
               as well as
               individually. I enjoy coding and design equally and aside from websites, I create brands, logos, marketing
@@ -16,7 +17,7 @@
             </div>
           </div>
         </div>
-        <div class="w-1/3">
+        <div class="lg:w-1/3 hidden lg:block">
           <img src="/images/projects/mockups/mademoiselle_mockup.png" alt="" />
         </div>
       </div>
@@ -109,10 +110,8 @@ onMounted(() => {
 
 
 .content-main-text {
-  font-size: 2rem;
-  font-size: clamp(32px, 4vw, 48px);
+  font-size: 1.2rem;
   text-align: center;
-  line-height: normal;
   cursor: default;
   z-index: 2;
   @apply flex text-center flex-col font-light w-full;
