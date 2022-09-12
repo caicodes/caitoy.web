@@ -51,9 +51,6 @@ const projectWindow = ref()
 const route = useRoute();
 const projectId = route.params.id
 
-// const getProjectInfo = (projectList, projectId) => {
-console.log('getProjectInfo', projectId, projectList)
-
 const project = computed(() => {
   return projectList.find(proj => proj.id == projectId)
 })

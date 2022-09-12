@@ -1,15 +1,11 @@
 <template>
-
   <div class="flex flex-col align-middle place-content-center relative">
-
-
     <div class="main-text">
       <div class="links">email/cai@artasce.com</div>
       <div class="links">github/@caicodes</div>
       <div class="links">wp/cai.artasce.com</div>
       <div class="links">resume/cai-resume.web.app</div>
       <div class="links">cv/cai-toy.web.app</div>
-
       <div class="flex mx-auto py-4 gap-4">
         <a class="btn btn-circle" v-for="social in socialLinks" :key="social" :href="social.linkUrl" target="_blank">
           <Github class="social-icon" v-if="social.linkTitle === 'github'" />
@@ -20,10 +16,7 @@
           <Pinterest class="social-icon" v-if="social.linkTitle === 'pinterest'" />
         </a>
       </div>
-
     </div>
-
-
 
     <!-- this is part of the default page  -->
 
@@ -53,7 +46,6 @@ import gsap from "gsap"
 
 const lgText = ref()
 const lgBgText = ref()
-
 
 const socialLinks = [
 
