@@ -1,70 +1,48 @@
 <template>
   <div class="flex flex-col align-middle place-content-center relative" @mousemove="mouseMove">
-    <div ref="lgText" class="large-text opacity-5 absolute text-accent">
-      work
-    </div>
-    <div ref="lgBgText" class="large-text-bg opacity-[1%] absolute bottom-0 text-base top-40 h-screen">
-      work
-    </div>
+
 
     <div class="main-text">
       <div class="line line6">
         <p>
-          <NuxtLink to="/projects/project">dashboard intelligence</NuxtLink>
+          <NuxtLink to="/project/dashboard-intelligence">dashboard intelligence</NuxtLink>
         </p>
       </div>
       <div class="line line8">
         <p>
-          <NuxtLink to="/projects/project">voya destinations</NuxtLink>
+          <NuxtLink to="/project/voya-destinations">voya destinations</NuxtLink>
         </p>
       </div>
       <div class="line line2">
         <p>
-          <NuxtLink to="/projects/project">coinwire</NuxtLink>
+          <NuxtLink to="/project/coinwire">coinwire</NuxtLink>
         </p>
       </div>
       <div class="line line5">
         <p>
-          <NuxtLink to="/projects/project">mademoiselle</NuxtLink>
+          <NuxtLink to="/project/mademoiselle">mademoiselle</NuxtLink>
         </p>
       </div>
       <div class="line line7">
         <p>
-          <NuxtLink to="/projects/project">mademoiselle collections</NuxtLink>
+          <NuxtLink to="/project/mademoiselle-collections">mademoiselle collections</NuxtLink>
         </p>
       </div>
       <div class="line line1">
         <p>
-          <NuxtLink to="/projects/project">modolla wallet</NuxtLink>
+          <NuxtLink to="/project/modolla-wallet">modolla wallet</NuxtLink>
         </p>
       </div>
       <div class="line line3">
         <p>
-          <NuxtLink to="/projects/project">tailwind templates</NuxtLink>
+          <NuxtLink to="/project/tailwind-templates">tailwind templates</NuxtLink>
         </p>
       </div>
       <div class="line line9">
         <p>
-          <NuxtLink to="/projects/project">artasce client portal</NuxtLink>
+          <NuxtLink to="/project/artasce-client-portal">artasce client portal</NuxtLink>
         </p>
       </div>
-
-      <!-- <div class="line line1">
-        <p>
-          <NuxtLink to="/projects/project">project</NuxtLink>
-        </p>
-      </div>
-      <div class="line line2">
-        <p>
-          <NuxtLink to="/projects/project">project</NuxtLink>
-        </p>
-      </div>
-      <div class="line line3">
-        <p>
-          <NuxtLink to="/projects/project">project</NuxtLink>
-        </p>
-      </div> -->
-
       <div class="cursor-follow1 cursor"></div>
       <div class="cursor-follow2 cursor"></div>
       <div class="cursor-follow3 cursor"></div>
@@ -75,39 +53,44 @@
       <div class="cursor-follow8 cursor"></div>
       <div class="cursor-follow9 cursor"></div>
     </div>
+    <!-- default contents -->
 
     <Head>
       <Title>Cai Toy / Work</Title>
     </Head>
+    <div ref="lgText" class="large-text opacity-5 absolute text-accent">
+      work
+    </div>
+    <div ref="lgBgText" class="large-text-bg opacity-[1%] absolute bottom-0 text-base top-40 h-screen">
+      work
+    </div>
   </div>
 </template>
 
 <script setup>
-import { getAnalytics, logEvent } from "firebase/analytics"
+// import { getAnalytics, logEvent } from "firebase/analytics"
 import gsap from "gsap"
 
 let posX = 0
 let posY = 0
+
+const lgText = ref()
+const lgBgText = ref()
+
 const mouseMove = (event) => {
-  // console.log("Mouse Moved ", event.x, event.y)
   posX = event.x
   posY = event.y
-
   gsap.to(".cursor", {
     x: posX + 80,
     y: posY - 480,
   })
 }
 
-const lgText = ref()
-const lgBgText = ref()
-
-
-
 onMounted(() => {
-  const analytics = getAnalytics()
-  logEvent(analytics, "portfolio_work_view")
-  console.log("here i am to save the day...")
+
+  // const analytics = getAnalytics()
+  // logEvent(analytics, "portfolio_work_view")
+  console.log("work page loaded...")
 
   const titleTimeline = gsap.timeline()
   titleTimeline

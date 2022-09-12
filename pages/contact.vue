@@ -10,9 +10,8 @@
       <div class="links">resume/cai-resume.web.app</div>
       <div class="links">cv/cai-toy.web.app</div>
 
-
       <div class="flex mx-auto py-4 gap-4">
-        <a class="btn btn-circle" v-for="social in socialLinks" :key="link" :href="social.linkUrl" target="_blank">
+        <a class="btn btn-circle" v-for="social in socialLinks" :key="social" :href="social.linkUrl" target="_blank">
           <Github class="social-icon" v-if="social.linkTitle === 'github'" />
           <Youtube class="social-icon" v-if="social.linkTitle === 'youtube'" />
           <Twitter class="social-icon" v-if="social.linkTitle === 'twitter'" />

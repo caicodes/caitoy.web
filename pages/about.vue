@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col align-middle place-content-center relative" @mousemove="mouseMove">
+  <div class="flex flex-col align-middle place-content-center relative">
     <div class="content-main-text">
       <div>
         <div>what do I want to say?</div>
       </div>
       <div class="flex mx-auto py-4 gap-4">
-        <a class="btn btn-circle" v-for="social in socialLinks" :key="link" :href="social.linkUrl" target="_blank">
+        <a class="btn btn-circle" v-for="social in socialLinks" :key="social" :href="social.linkUrl" target="_blank">
           <Github class="social-icon" v-if="social.linkTitle === 'github'" />
           <Youtube class="social-icon" v-if="social.linkTitle === 'youtube'" />
           <Twitter class="social-icon" v-if="social.linkTitle === 'twitter'" />
@@ -72,21 +72,9 @@ const socialLinks = [
 const lgText = ref()
 const lgBgText = ref()
 
-let posX = 0
-let posY = 0
-const mouseMove = (event) => {
-  // console.log("Mouse Moved ", event.x, event.y)
-  posX = event.x
-  posY = event.y
-
-  gsap.to(".follow", {
-    x: posX - 0,
-    y: posY - 400,
-  })
-}
 
 onMounted(() => {
-  console.log("here i am to save the day...")
+  console.log("about page...")
   // const analytics = getAnalytics()
   // logEvent(analytics, "portfolio_about_view")
 
@@ -117,8 +105,6 @@ onMounted(() => {
 .social-icon {
   @apply text-accent h-8 w-8 absolute;
 }
-
-
 
 .cursor {
   position: absolute;
