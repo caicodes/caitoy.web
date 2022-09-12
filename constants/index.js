@@ -56,9 +56,9 @@ export const projectList = [
   {
     id: "voya-destinations",
     name: "Voya Destinations",
-    thumb: "/images/projects/thumb-voya-destinations.jpg",
-    landing: "/images/projects/landing-voya-destinations.jpg",
-    desc: "Voya Destinations App for iOS, Android, and Web. This project also included full branding, Flutter, Vue 3 Website, WordPress Microsites and more.",
+    thumb: "/images/projects/thumbs/voya-destinations.jpg",
+    landing: "/images/projects/landings/voya-destinations.jpg",
+    desc: "Voya Destinations App for iOS, Android, and Web. This project also included full branding, Flutter, Vue 3 Website, and several headless WordPress microsites.",
     url: "https://voya-destinations.web.app/",
     gitUrl: "https://github.com/caicodes/",
   },
