@@ -2,7 +2,11 @@
   <div class="flex flex-col align-middle place-content-center relative">
     <div class="content-main-text">
       <div>
-        <div>what do I want to say?</div>
+        <div class="p-8">UX/UI DESIGNER & SENIOR SOFTWARE ENGINEER</div>
+        <div class="p-8">
+          I am a solid website producer with end to end experience and the ability to work on teams as well as
+          individually. I enjoy coding and design equally and aside from websites, I create brands, logos, marketing and
+          promotional designs, motion graphics, videos, and even product photography.</div>
       </div>
       <div class="flex mx-auto py-4 gap-4">
         <a class="btn btn-circle" v-for="social in socialLinks" :key="social" :href="social.linkUrl" target="_blank">
