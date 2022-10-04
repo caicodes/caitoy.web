@@ -84,7 +84,7 @@ export const projectList = [
     name: "Dashboard Intelligence",
     thumb: "/images/projects/thumbs/dashboard-intelligence.jpg",
     landing: "/images/projects/landings/dashboard-intelligence.jpg",
-    desc: "Interactive Data VisualiReact and Apex Charts.",
+    desc: "Interactive Data Visualization Dashboard with React and Apex Charts.",
     url: "https://dashboard-intelligence.vercel.app/",
     gitUrl: "https://github.com/caicodes/",
     tags: [],
