@@ -10,14 +10,25 @@
 </template>
 
 <script setup>
-import firebase from './firebase/firebase'
+import firebase from './firebase/firebase';
 import { getAnalytics, logEvent } from "firebase/analytics";
 
+useHead({
+  title: 'Cai Toy / Design and Development Portfolio',
+  meta: [
+    { name: 'description', content: 'Portfolio site of Cai Toy.' }
+  ],
+
+});
+
 onMounted(() => {
-  const analytics = getAnalytics(firebase)
-  // logEvent(analytics, "portfolio_app_view")
+  const analytics = getAnalytics(firebase);
+  logEvent(analytics, "portfolio_app_view");
 
 })
+
+
+
 </script>
 
 <style>

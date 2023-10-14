@@ -1,5 +1,5 @@
-import { defineNuxtConfig } from "nuxt"
-import gsap from "gsap"
+// import gsap from "gsap"
+
 export default defineNuxtConfig({
   modules: [
     [
@@ -15,43 +15,46 @@ export default defineNuxtConfig({
     ],
   ],
   css: ["@/styles/tailwind.css"],
-  build: {
-    postcss: {
-      postcssOptions: require("./postcss.config.js"),
+  devtools: { enabled: true },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
-  meta: {
-    title: "Cai Toy / Design, Develoment, Production...",
-  },
-  head: {
-    link: [
-      {
-        rel: "apple-touch-icon",
-        sizes: "180x180",
-        href: "/apple-touch-icon.png",
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: "/favicon-32x32.png",
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "16x16",
-        href: "/favicon-16x16.png",
-      },
-      { rel: "manifest", href: "/site.webmanifest" },
-    ],
-  },
-  gsap: {
-    extraPlugins: {
-      scrollTo: true,
-      scrollTrigger: true,
-    },
-    extraEases: {
-      expoScaleEase: true,
+
+  // gsap: {
+  //   extraPlugins: {
+  //     scrollTo: true,
+  //     scrollTrigger: true,
+  //   },
+  //   extraEases: {
+  //     expoScaleEase: true,
+  //   },
+  // },
+
+  app: {
+    head: {
+      link: [
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/apple-touch-icon.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "/favicon-32x32.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/favicon-16x16.png",
+        },
+        { rel: "manifest", href: "/site.webmanifest" },
+      ],
     },
   },
 })

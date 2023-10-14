@@ -33,15 +33,12 @@ html {
 }
 
 body {
-  transition: background-color 0.618s linear;
-}
-
-body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   line-height: 1.6;
   overflow-x: hidden !important;
   background: transparent;
+  transition: background-color 0.618s linear;
   color: var(--base-content);
 }
 
